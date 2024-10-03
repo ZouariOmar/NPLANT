@@ -1,0 +1,12 @@
+{
+	"firebaseConfig": {
+		"apiKey": "AIzaSyDboLSUY1wHSCkGN6BqvZwu2k1CGMVB7Kc",
+		"authDomain": "iot-project-e76ac.firebaseapp.com",
+		"databaseURL": "https://iot-project-e76ac-default-rtdb.firebaseio.com",
+		"projectId": "iot-project-e76ac",
+		"storageBucket": "iot-project-e76ac.appspot.com",
+		"messagingSenderId": "190167228371",
+		"appId": "1:190167228371:web:6f7a042b629f62422dd926",
+		"measurementId": "G-H57M1GHCP7"
+	}
+}

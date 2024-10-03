@@ -1,0 +1,1 @@
+/usr/bin/cc  -Wall -Wextra -g CMakeFiles/app.dir/home/zouari_omar/Documents/Daily/Projects/IoT_project/project/src/main.c.o CMakeFiles/app.dir/home/zouari_omar/Documents/Daily/Projects/IoT_project/project/src/lib.c.o -o app  -lm -lSDL -lSDL_ttf -lSDL_image -lSDL_mixer

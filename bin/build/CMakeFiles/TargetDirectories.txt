@@ -1,0 +1,3 @@
+/home/zouari_omar/Documents/Daily/Projects/IoT_project/bin/build/CMakeFiles/app.dir
+/home/zouari_omar/Documents/Daily/Projects/IoT_project/bin/build/CMakeFiles/edit_cache.dir
+/home/zouari_omar/Documents/Daily/Projects/IoT_project/bin/build/CMakeFiles/rebuild_cache.dir

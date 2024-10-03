@@ -1,0 +1,14 @@
+[
+{
+  "directory": "/home/zouari_omar/Documents/Daily/Projects/IoT_project/bin/build",
+  "command": "/usr/bin/gcc -D_DEFAULT_SOURCE  -Wall -Wextra -g -g -std=gnu99 -o CMakeFiles/app.dir/home/zouari_omar/Documents/Daily/Projects/IoT_project/project/GUI/src/main.c.o -c /home/zouari_omar/Documents/Daily/Projects/IoT_project/project/GUI/src/main.c",
+  "file": "/home/zouari_omar/Documents/Daily/Projects/IoT_project/project/GUI/src/main.c",
+  "output": "CMakeFiles/app.dir/home/zouari_omar/Documents/Daily/Projects/IoT_project/project/GUI/src/main.c.o"
+},
+{
+  "directory": "/home/zouari_omar/Documents/Daily/Projects/IoT_project/bin/build",
+  "command": "/usr/bin/gcc -D_DEFAULT_SOURCE  -Wall -Wextra -g -g -std=gnu99 -o CMakeFiles/app.dir/home/zouari_omar/Documents/Daily/Projects/IoT_project/project/GUI/src/lib.c.o -c /home/zouari_omar/Documents/Daily/Projects/IoT_project/project/GUI/src/lib.c",
+  "file": "/home/zouari_omar/Documents/Daily/Projects/IoT_project/project/GUI/src/lib.c",
+  "output": "CMakeFiles/app.dir/home/zouari_omar/Documents/Daily/Projects/IoT_project/project/GUI/src/lib.c.o"
+}
+]
