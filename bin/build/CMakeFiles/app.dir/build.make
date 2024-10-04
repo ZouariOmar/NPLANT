@@ -69,45 +69,46 @@ include CMakeFiles/app.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/app.dir/flags.make
 
-CMakeFiles/app.dir/home/zouari_omar/Documents/Daily/Projects/IoT_project/project/src/main.c.o: CMakeFiles/app.dir/flags.make
-CMakeFiles/app.dir/home/zouari_omar/Documents/Daily/Projects/IoT_project/project/src/main.c.o: /home/zouari_omar/Documents/Daily/Projects/IoT_project/project/src/main.c
-CMakeFiles/app.dir/home/zouari_omar/Documents/Daily/Projects/IoT_project/project/src/main.c.o: CMakeFiles/app.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/zouari_omar/Documents/Daily/Projects/IoT_project/bin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/app.dir/home/zouari_omar/Documents/Daily/Projects/IoT_project/project/src/main.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/app.dir/home/zouari_omar/Documents/Daily/Projects/IoT_project/project/src/main.c.o -MF CMakeFiles/app.dir/home/zouari_omar/Documents/Daily/Projects/IoT_project/project/src/main.c.o.d -o CMakeFiles/app.dir/home/zouari_omar/Documents/Daily/Projects/IoT_project/project/src/main.c.o -c /home/zouari_omar/Documents/Daily/Projects/IoT_project/project/src/main.c
+CMakeFiles/app.dir/home/zouari_omar/Documents/Daily/Projects/IoT_project/project/GUI/src/main.c.o: CMakeFiles/app.dir/flags.make
+CMakeFiles/app.dir/home/zouari_omar/Documents/Daily/Projects/IoT_project/project/GUI/src/main.c.o: /home/zouari_omar/Documents/Daily/Projects/IoT_project/project/GUI/src/main.c
+CMakeFiles/app.dir/home/zouari_omar/Documents/Daily/Projects/IoT_project/project/GUI/src/main.c.o: CMakeFiles/app.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/zouari_omar/Documents/Daily/Projects/IoT_project/bin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/app.dir/home/zouari_omar/Documents/Daily/Projects/IoT_project/project/GUI/src/main.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/app.dir/home/zouari_omar/Documents/Daily/Projects/IoT_project/project/GUI/src/main.c.o -MF CMakeFiles/app.dir/home/zouari_omar/Documents/Daily/Projects/IoT_project/project/GUI/src/main.c.o.d -o CMakeFiles/app.dir/home/zouari_omar/Documents/Daily/Projects/IoT_project/project/GUI/src/main.c.o -c /home/zouari_omar/Documents/Daily/Projects/IoT_project/project/GUI/src/main.c
 
-CMakeFiles/app.dir/home/zouari_omar/Documents/Daily/Projects/IoT_project/project/src/main.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/app.dir/home/zouari_omar/Documents/Daily/Projects/IoT_project/project/src/main.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/zouari_omar/Documents/Daily/Projects/IoT_project/project/src/main.c > CMakeFiles/app.dir/home/zouari_omar/Documents/Daily/Projects/IoT_project/project/src/main.c.i
+CMakeFiles/app.dir/home/zouari_omar/Documents/Daily/Projects/IoT_project/project/GUI/src/main.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/app.dir/home/zouari_omar/Documents/Daily/Projects/IoT_project/project/GUI/src/main.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/zouari_omar/Documents/Daily/Projects/IoT_project/project/GUI/src/main.c > CMakeFiles/app.dir/home/zouari_omar/Documents/Daily/Projects/IoT_project/project/GUI/src/main.c.i
 
-CMakeFiles/app.dir/home/zouari_omar/Documents/Daily/Projects/IoT_project/project/src/main.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/app.dir/home/zouari_omar/Documents/Daily/Projects/IoT_project/project/src/main.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/zouari_omar/Documents/Daily/Projects/IoT_project/project/src/main.c -o CMakeFiles/app.dir/home/zouari_omar/Documents/Daily/Projects/IoT_project/project/src/main.c.s
+CMakeFiles/app.dir/home/zouari_omar/Documents/Daily/Projects/IoT_project/project/GUI/src/main.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/app.dir/home/zouari_omar/Documents/Daily/Projects/IoT_project/project/GUI/src/main.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/zouari_omar/Documents/Daily/Projects/IoT_project/project/GUI/src/main.c -o CMakeFiles/app.dir/home/zouari_omar/Documents/Daily/Projects/IoT_project/project/GUI/src/main.c.s
 
-CMakeFiles/app.dir/home/zouari_omar/Documents/Daily/Projects/IoT_project/project/src/lib.c.o: CMakeFiles/app.dir/flags.make
-CMakeFiles/app.dir/home/zouari_omar/Documents/Daily/Projects/IoT_project/project/src/lib.c.o: /home/zouari_omar/Documents/Daily/Projects/IoT_project/project/src/lib.c
-CMakeFiles/app.dir/home/zouari_omar/Documents/Daily/Projects/IoT_project/project/src/lib.c.o: CMakeFiles/app.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/zouari_omar/Documents/Daily/Projects/IoT_project/bin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/app.dir/home/zouari_omar/Documents/Daily/Projects/IoT_project/project/src/lib.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/app.dir/home/zouari_omar/Documents/Daily/Projects/IoT_project/project/src/lib.c.o -MF CMakeFiles/app.dir/home/zouari_omar/Documents/Daily/Projects/IoT_project/project/src/lib.c.o.d -o CMakeFiles/app.dir/home/zouari_omar/Documents/Daily/Projects/IoT_project/project/src/lib.c.o -c /home/zouari_omar/Documents/Daily/Projects/IoT_project/project/src/lib.c
+CMakeFiles/app.dir/home/zouari_omar/Documents/Daily/Projects/IoT_project/project/GUI/src/lib.c.o: CMakeFiles/app.dir/flags.make
+CMakeFiles/app.dir/home/zouari_omar/Documents/Daily/Projects/IoT_project/project/GUI/src/lib.c.o: /home/zouari_omar/Documents/Daily/Projects/IoT_project/project/GUI/src/lib.c
+CMakeFiles/app.dir/home/zouari_omar/Documents/Daily/Projects/IoT_project/project/GUI/src/lib.c.o: CMakeFiles/app.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/zouari_omar/Documents/Daily/Projects/IoT_project/bin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/app.dir/home/zouari_omar/Documents/Daily/Projects/IoT_project/project/GUI/src/lib.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/app.dir/home/zouari_omar/Documents/Daily/Projects/IoT_project/project/GUI/src/lib.c.o -MF CMakeFiles/app.dir/home/zouari_omar/Documents/Daily/Projects/IoT_project/project/GUI/src/lib.c.o.d -o CMakeFiles/app.dir/home/zouari_omar/Documents/Daily/Projects/IoT_project/project/GUI/src/lib.c.o -c /home/zouari_omar/Documents/Daily/Projects/IoT_project/project/GUI/src/lib.c
 
-CMakeFiles/app.dir/home/zouari_omar/Documents/Daily/Projects/IoT_project/project/src/lib.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/app.dir/home/zouari_omar/Documents/Daily/Projects/IoT_project/project/src/lib.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/zouari_omar/Documents/Daily/Projects/IoT_project/project/src/lib.c > CMakeFiles/app.dir/home/zouari_omar/Documents/Daily/Projects/IoT_project/project/src/lib.c.i
+CMakeFiles/app.dir/home/zouari_omar/Documents/Daily/Projects/IoT_project/project/GUI/src/lib.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/app.dir/home/zouari_omar/Documents/Daily/Projects/IoT_project/project/GUI/src/lib.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/zouari_omar/Documents/Daily/Projects/IoT_project/project/GUI/src/lib.c > CMakeFiles/app.dir/home/zouari_omar/Documents/Daily/Projects/IoT_project/project/GUI/src/lib.c.i
 
-CMakeFiles/app.dir/home/zouari_omar/Documents/Daily/Projects/IoT_project/project/src/lib.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/app.dir/home/zouari_omar/Documents/Daily/Projects/IoT_project/project/src/lib.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/zouari_omar/Documents/Daily/Projects/IoT_project/project/src/lib.c -o CMakeFiles/app.dir/home/zouari_omar/Documents/Daily/Projects/IoT_project/project/src/lib.c.s
+CMakeFiles/app.dir/home/zouari_omar/Documents/Daily/Projects/IoT_project/project/GUI/src/lib.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/app.dir/home/zouari_omar/Documents/Daily/Projects/IoT_project/project/GUI/src/lib.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/zouari_omar/Documents/Daily/Projects/IoT_project/project/GUI/src/lib.c -o CMakeFiles/app.dir/home/zouari_omar/Documents/Daily/Projects/IoT_project/project/GUI/src/lib.c.s
 
 # Object files for target app
 app_OBJECTS = \
-"CMakeFiles/app.dir/home/zouari_omar/Documents/Daily/Projects/IoT_project/project/src/main.c.o" \
-"CMakeFiles/app.dir/home/zouari_omar/Documents/Daily/Projects/IoT_project/project/src/lib.c.o"
+"CMakeFiles/app.dir/home/zouari_omar/Documents/Daily/Projects/IoT_project/project/GUI/src/main.c.o" \
+"CMakeFiles/app.dir/home/zouari_omar/Documents/Daily/Projects/IoT_project/project/GUI/src/lib.c.o"
 
 # External object files for target app
 app_EXTERNAL_OBJECTS =
 
-app: CMakeFiles/app.dir/home/zouari_omar/Documents/Daily/Projects/IoT_project/project/src/main.c.o
-app: CMakeFiles/app.dir/home/zouari_omar/Documents/Daily/Projects/IoT_project/project/src/lib.c.o
+app: CMakeFiles/app.dir/home/zouari_omar/Documents/Daily/Projects/IoT_project/project/GUI/src/main.c.o
+app: CMakeFiles/app.dir/home/zouari_omar/Documents/Daily/Projects/IoT_project/project/GUI/src/lib.c.o
 app: CMakeFiles/app.dir/build.make
+app: /usr/lib/x86_64-linux-gnu/libSDL2.so
 app: CMakeFiles/app.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/zouari_omar/Documents/Daily/Projects/IoT_project/bin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking C executable app"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/app.dir/link.txt --verbose=$(VERBOSE)

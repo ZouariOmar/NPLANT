@@ -4,7 +4,7 @@
 # compile C with /usr/bin/cc
 C_DEFINES = -D_DEFAULT_SOURCE
 
-C_INCLUDES = 
+C_INCLUDES = -isystem /usr/include/SDL2
 
 C_FLAGS =  -Wall -Wextra -g -std=gnu99
 

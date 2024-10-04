@@ -129,53 +129,53 @@ app/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/build
 .PHONY : app/fast
 
-home/zouari_omar/Documents/Daily/Projects/IoT_project/project/src/lib.o: home/zouari_omar/Documents/Daily/Projects/IoT_project/project/src/lib.c.o
-.PHONY : home/zouari_omar/Documents/Daily/Projects/IoT_project/project/src/lib.o
+home/zouari_omar/Documents/Daily/Projects/IoT_project/project/GUI/src/lib.o: home/zouari_omar/Documents/Daily/Projects/IoT_project/project/GUI/src/lib.c.o
+.PHONY : home/zouari_omar/Documents/Daily/Projects/IoT_project/project/GUI/src/lib.o
 
 # target to build an object file
-home/zouari_omar/Documents/Daily/Projects/IoT_project/project/src/lib.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/home/zouari_omar/Documents/Daily/Projects/IoT_project/project/src/lib.c.o
-.PHONY : home/zouari_omar/Documents/Daily/Projects/IoT_project/project/src/lib.c.o
+home/zouari_omar/Documents/Daily/Projects/IoT_project/project/GUI/src/lib.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/home/zouari_omar/Documents/Daily/Projects/IoT_project/project/GUI/src/lib.c.o
+.PHONY : home/zouari_omar/Documents/Daily/Projects/IoT_project/project/GUI/src/lib.c.o
 
-home/zouari_omar/Documents/Daily/Projects/IoT_project/project/src/lib.i: home/zouari_omar/Documents/Daily/Projects/IoT_project/project/src/lib.c.i
-.PHONY : home/zouari_omar/Documents/Daily/Projects/IoT_project/project/src/lib.i
+home/zouari_omar/Documents/Daily/Projects/IoT_project/project/GUI/src/lib.i: home/zouari_omar/Documents/Daily/Projects/IoT_project/project/GUI/src/lib.c.i
+.PHONY : home/zouari_omar/Documents/Daily/Projects/IoT_project/project/GUI/src/lib.i
 
 # target to preprocess a source file
-home/zouari_omar/Documents/Daily/Projects/IoT_project/project/src/lib.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/home/zouari_omar/Documents/Daily/Projects/IoT_project/project/src/lib.c.i
-.PHONY : home/zouari_omar/Documents/Daily/Projects/IoT_project/project/src/lib.c.i
+home/zouari_omar/Documents/Daily/Projects/IoT_project/project/GUI/src/lib.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/home/zouari_omar/Documents/Daily/Projects/IoT_project/project/GUI/src/lib.c.i
+.PHONY : home/zouari_omar/Documents/Daily/Projects/IoT_project/project/GUI/src/lib.c.i
 
-home/zouari_omar/Documents/Daily/Projects/IoT_project/project/src/lib.s: home/zouari_omar/Documents/Daily/Projects/IoT_project/project/src/lib.c.s
-.PHONY : home/zouari_omar/Documents/Daily/Projects/IoT_project/project/src/lib.s
+home/zouari_omar/Documents/Daily/Projects/IoT_project/project/GUI/src/lib.s: home/zouari_omar/Documents/Daily/Projects/IoT_project/project/GUI/src/lib.c.s
+.PHONY : home/zouari_omar/Documents/Daily/Projects/IoT_project/project/GUI/src/lib.s
 
 # target to generate assembly for a file
-home/zouari_omar/Documents/Daily/Projects/IoT_project/project/src/lib.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/home/zouari_omar/Documents/Daily/Projects/IoT_project/project/src/lib.c.s
-.PHONY : home/zouari_omar/Documents/Daily/Projects/IoT_project/project/src/lib.c.s
+home/zouari_omar/Documents/Daily/Projects/IoT_project/project/GUI/src/lib.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/home/zouari_omar/Documents/Daily/Projects/IoT_project/project/GUI/src/lib.c.s
+.PHONY : home/zouari_omar/Documents/Daily/Projects/IoT_project/project/GUI/src/lib.c.s
 
-home/zouari_omar/Documents/Daily/Projects/IoT_project/project/src/main.o: home/zouari_omar/Documents/Daily/Projects/IoT_project/project/src/main.c.o
-.PHONY : home/zouari_omar/Documents/Daily/Projects/IoT_project/project/src/main.o
+home/zouari_omar/Documents/Daily/Projects/IoT_project/project/GUI/src/main.o: home/zouari_omar/Documents/Daily/Projects/IoT_project/project/GUI/src/main.c.o
+.PHONY : home/zouari_omar/Documents/Daily/Projects/IoT_project/project/GUI/src/main.o
 
 # target to build an object file
-home/zouari_omar/Documents/Daily/Projects/IoT_project/project/src/main.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/home/zouari_omar/Documents/Daily/Projects/IoT_project/project/src/main.c.o
-.PHONY : home/zouari_omar/Documents/Daily/Projects/IoT_project/project/src/main.c.o
+home/zouari_omar/Documents/Daily/Projects/IoT_project/project/GUI/src/main.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/home/zouari_omar/Documents/Daily/Projects/IoT_project/project/GUI/src/main.c.o
+.PHONY : home/zouari_omar/Documents/Daily/Projects/IoT_project/project/GUI/src/main.c.o
 
-home/zouari_omar/Documents/Daily/Projects/IoT_project/project/src/main.i: home/zouari_omar/Documents/Daily/Projects/IoT_project/project/src/main.c.i
-.PHONY : home/zouari_omar/Documents/Daily/Projects/IoT_project/project/src/main.i
+home/zouari_omar/Documents/Daily/Projects/IoT_project/project/GUI/src/main.i: home/zouari_omar/Documents/Daily/Projects/IoT_project/project/GUI/src/main.c.i
+.PHONY : home/zouari_omar/Documents/Daily/Projects/IoT_project/project/GUI/src/main.i
 
 # target to preprocess a source file
-home/zouari_omar/Documents/Daily/Projects/IoT_project/project/src/main.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/home/zouari_omar/Documents/Daily/Projects/IoT_project/project/src/main.c.i
-.PHONY : home/zouari_omar/Documents/Daily/Projects/IoT_project/project/src/main.c.i
+home/zouari_omar/Documents/Daily/Projects/IoT_project/project/GUI/src/main.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/home/zouari_omar/Documents/Daily/Projects/IoT_project/project/GUI/src/main.c.i
+.PHONY : home/zouari_omar/Documents/Daily/Projects/IoT_project/project/GUI/src/main.c.i
 
-home/zouari_omar/Documents/Daily/Projects/IoT_project/project/src/main.s: home/zouari_omar/Documents/Daily/Projects/IoT_project/project/src/main.c.s
-.PHONY : home/zouari_omar/Documents/Daily/Projects/IoT_project/project/src/main.s
+home/zouari_omar/Documents/Daily/Projects/IoT_project/project/GUI/src/main.s: home/zouari_omar/Documents/Daily/Projects/IoT_project/project/GUI/src/main.c.s
+.PHONY : home/zouari_omar/Documents/Daily/Projects/IoT_project/project/GUI/src/main.s
 
 # target to generate assembly for a file
-home/zouari_omar/Documents/Daily/Projects/IoT_project/project/src/main.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/home/zouari_omar/Documents/Daily/Projects/IoT_project/project/src/main.c.s
-.PHONY : home/zouari_omar/Documents/Daily/Projects/IoT_project/project/src/main.c.s
+home/zouari_omar/Documents/Daily/Projects/IoT_project/project/GUI/src/main.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/home/zouari_omar/Documents/Daily/Projects/IoT_project/project/GUI/src/main.c.s
+.PHONY : home/zouari_omar/Documents/Daily/Projects/IoT_project/project/GUI/src/main.c.s
 
 # Help Target
 help:
@@ -186,12 +186,12 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... app"
-	@echo "... home/zouari_omar/Documents/Daily/Projects/IoT_project/project/src/lib.o"
-	@echo "... home/zouari_omar/Documents/Daily/Projects/IoT_project/project/src/lib.i"
-	@echo "... home/zouari_omar/Documents/Daily/Projects/IoT_project/project/src/lib.s"
-	@echo "... home/zouari_omar/Documents/Daily/Projects/IoT_project/project/src/main.o"
-	@echo "... home/zouari_omar/Documents/Daily/Projects/IoT_project/project/src/main.i"
-	@echo "... home/zouari_omar/Documents/Daily/Projects/IoT_project/project/src/main.s"
+	@echo "... home/zouari_omar/Documents/Daily/Projects/IoT_project/project/GUI/src/lib.o"
+	@echo "... home/zouari_omar/Documents/Daily/Projects/IoT_project/project/GUI/src/lib.i"
+	@echo "... home/zouari_omar/Documents/Daily/Projects/IoT_project/project/GUI/src/lib.s"
+	@echo "... home/zouari_omar/Documents/Daily/Projects/IoT_project/project/GUI/src/main.o"
+	@echo "... home/zouari_omar/Documents/Daily/Projects/IoT_project/project/GUI/src/main.i"
+	@echo "... home/zouari_omar/Documents/Daily/Projects/IoT_project/project/GUI/src/main.s"
 .PHONY : help
 
 
