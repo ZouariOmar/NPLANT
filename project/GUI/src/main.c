@@ -9,6 +9,7 @@
 
 //? ------------------------------ INCLUDE PROTOTYPE DECLARATION PART ------------------------------
 #include "../inc/inc.h"
+#include "../inc/connect.h"
 
 //? --------------------------------- MAIN() INT FUNCTION DEV PART ---------------------------------
 
@@ -49,7 +50,9 @@ int main() {
   SDL_RenderPresent(srf.win);
 
   // Wait for 5 seconds
-  SDL_Delay(5000);
+  //SDL_Delay(5000);
+
+  connectToFirebase();
 
   // Clean up and close
   SDL_DestroyRenderer(srf.win);

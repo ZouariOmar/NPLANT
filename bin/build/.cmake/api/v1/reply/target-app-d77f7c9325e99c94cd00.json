@@ -27,25 +27,31 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 31,
+				"line" : 32,
 				"parent" : 0
 			},
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 43,
+				"line" : 46,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 74,
 				"parent" : 0
 			},
 			{
 				"command" : 2,
 				"file" : 0,
-				"line" : 34,
+				"line" : 35,
 				"parent" : 0
 			},
 			{
 				"command" : 3,
 				"file" : 0,
-				"line" : 40,
+				"line" : 45,
 				"parent" : 0
 			}
 		]
@@ -56,20 +62,20 @@
 			"compileCommandFragments" : 
 			[
 				{
-					"fragment" : " -Wall -Wextra -g -g -std=gnu99"
+					"fragment" : " -Wall -Wextra -g -std=gnu99"
 				}
 			],
 			"defines" : 
 			[
 				{
-					"backtrace" : 3,
+					"backtrace" : 4,
 					"define" : "_DEFAULT_SOURCE"
 				}
 			],
 			"includes" : 
 			[
 				{
-					"backtrace" : 4,
+					"backtrace" : 5,
 					"isSystem" : true,
 					"path" : "/usr/include/SDL2"
 				}
@@ -86,7 +92,8 @@
 			"sourceIndexes" : 
 			[
 				0,
-				1
+				1,
+				2
 			]
 		}
 	],
@@ -96,7 +103,7 @@
 		"commandFragments" : 
 		[
 			{
-				"fragment" : "-Wall -Wextra -g -g",
+				"fragment" : "-Wall -Wextra -g",
 				"role" : "flags"
 			},
 			{
@@ -105,7 +112,17 @@
 			},
 			{
 				"backtrace" : 2,
+				"fragment" : "-lm",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
 				"fragment" : "/usr/lib/x86_64-linux-gnu/libSDL2.so",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 3,
+				"fragment" : "/usr/lib/x86_64-linux-gnu/libcurl.so",
 				"role" : "libraries"
 			},
 			{
@@ -130,14 +147,16 @@
 			"sourceIndexes" : 
 			[
 				0,
-				1
+				1,
+				2
 			]
 		},
 		{
 			"name" : "Header Files",
 			"sourceIndexes" : 
 			[
-				2
+				3,
+				4
 			]
 		}
 	],
@@ -157,7 +176,18 @@
 		},
 		{
 			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "/home/zouari_omar/Documents/Daily/Projects/IoT_project/project/GUI/src/connect.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
 			"path" : "/home/zouari_omar/Documents/Daily/Projects/IoT_project/project/GUI/inc/inc.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "/home/zouari_omar/Documents/Daily/Projects/IoT_project/project/GUI/inc/connect.h",
 			"sourceGroupIndex" : 1
 		}
 	],

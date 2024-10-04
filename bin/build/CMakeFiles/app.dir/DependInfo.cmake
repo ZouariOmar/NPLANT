@@ -8,6 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "/home/zouari_omar/Documents/Daily/Projects/IoT_project/project/GUI/src/connect.c" "CMakeFiles/app.dir/home/zouari_omar/Documents/Daily/Projects/IoT_project/project/GUI/src/connect.c.o" "gcc" "CMakeFiles/app.dir/home/zouari_omar/Documents/Daily/Projects/IoT_project/project/GUI/src/connect.c.o.d"
   "/home/zouari_omar/Documents/Daily/Projects/IoT_project/project/GUI/src/lib.c" "CMakeFiles/app.dir/home/zouari_omar/Documents/Daily/Projects/IoT_project/project/GUI/src/lib.c.o" "gcc" "CMakeFiles/app.dir/home/zouari_omar/Documents/Daily/Projects/IoT_project/project/GUI/src/lib.c.o.d"
   "/home/zouari_omar/Documents/Daily/Projects/IoT_project/project/GUI/src/main.c" "CMakeFiles/app.dir/home/zouari_omar/Documents/Daily/Projects/IoT_project/project/GUI/src/main.c.o" "gcc" "CMakeFiles/app.dir/home/zouari_omar/Documents/Daily/Projects/IoT_project/project/GUI/src/main.c.o.d"
   )

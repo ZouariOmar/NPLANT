@@ -129,6 +129,30 @@ app/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/build
 .PHONY : app/fast
 
+home/zouari_omar/Documents/Daily/Projects/IoT_project/project/GUI/src/connect.o: home/zouari_omar/Documents/Daily/Projects/IoT_project/project/GUI/src/connect.c.o
+.PHONY : home/zouari_omar/Documents/Daily/Projects/IoT_project/project/GUI/src/connect.o
+
+# target to build an object file
+home/zouari_omar/Documents/Daily/Projects/IoT_project/project/GUI/src/connect.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/home/zouari_omar/Documents/Daily/Projects/IoT_project/project/GUI/src/connect.c.o
+.PHONY : home/zouari_omar/Documents/Daily/Projects/IoT_project/project/GUI/src/connect.c.o
+
+home/zouari_omar/Documents/Daily/Projects/IoT_project/project/GUI/src/connect.i: home/zouari_omar/Documents/Daily/Projects/IoT_project/project/GUI/src/connect.c.i
+.PHONY : home/zouari_omar/Documents/Daily/Projects/IoT_project/project/GUI/src/connect.i
+
+# target to preprocess a source file
+home/zouari_omar/Documents/Daily/Projects/IoT_project/project/GUI/src/connect.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/home/zouari_omar/Documents/Daily/Projects/IoT_project/project/GUI/src/connect.c.i
+.PHONY : home/zouari_omar/Documents/Daily/Projects/IoT_project/project/GUI/src/connect.c.i
+
+home/zouari_omar/Documents/Daily/Projects/IoT_project/project/GUI/src/connect.s: home/zouari_omar/Documents/Daily/Projects/IoT_project/project/GUI/src/connect.c.s
+.PHONY : home/zouari_omar/Documents/Daily/Projects/IoT_project/project/GUI/src/connect.s
+
+# target to generate assembly for a file
+home/zouari_omar/Documents/Daily/Projects/IoT_project/project/GUI/src/connect.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/home/zouari_omar/Documents/Daily/Projects/IoT_project/project/GUI/src/connect.c.s
+.PHONY : home/zouari_omar/Documents/Daily/Projects/IoT_project/project/GUI/src/connect.c.s
+
 home/zouari_omar/Documents/Daily/Projects/IoT_project/project/GUI/src/lib.o: home/zouari_omar/Documents/Daily/Projects/IoT_project/project/GUI/src/lib.c.o
 .PHONY : home/zouari_omar/Documents/Daily/Projects/IoT_project/project/GUI/src/lib.o
 
@@ -186,6 +210,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... app"
+	@echo "... home/zouari_omar/Documents/Daily/Projects/IoT_project/project/GUI/src/connect.o"
+	@echo "... home/zouari_omar/Documents/Daily/Projects/IoT_project/project/GUI/src/connect.i"
+	@echo "... home/zouari_omar/Documents/Daily/Projects/IoT_project/project/GUI/src/connect.s"
 	@echo "... home/zouari_omar/Documents/Daily/Projects/IoT_project/project/GUI/src/lib.o"
 	@echo "... home/zouari_omar/Documents/Daily/Projects/IoT_project/project/GUI/src/lib.i"
 	@echo "... home/zouari_omar/Documents/Daily/Projects/IoT_project/project/GUI/src/lib.s"
