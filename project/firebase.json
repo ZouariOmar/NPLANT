@@ -10,8 +10,8 @@
 		"measurementId": "G-H57M1GHCP7"
 	},
 	"reCAPTCHA": {
-		"role": "registration tool",
-		"password": "2Y6Ow0oa3Y8xwit1",
-		"Token": "35B307F2-27FD-412A-8F9D-28133B0EE33C"
+		"role": "registration/signIn/signUp tool",
+		"password": "",
+		"Debug Token": "35B307F2-27FD-412A-8F9D-28133B0EE33C"
 	}
 }

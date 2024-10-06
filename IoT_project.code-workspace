@@ -9,7 +9,10 @@
 		"files.associations": {
 			"inc.h": "c",
 			"sdl.h": "c",
-			"curl.h": "c"
+			"curl.h": "c",
+			"connect.h": "c",
+			"stdio.h": "c",
+			"string.h": "c"
 		}
 	}
 }

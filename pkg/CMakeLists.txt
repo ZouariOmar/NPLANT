@@ -26,6 +26,7 @@ set(SOURCES
 set(HEADERS
   ../project/GUI/inc/inc.h
   ../project/GUI/inc/connect.h
+  ../project/GUI/modules/color.h
 )
 
 # Add the executable target

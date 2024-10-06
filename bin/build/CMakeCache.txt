@@ -32,11 +32,11 @@ CMAKE_CXX_COMPILER:FILEPATH=/usr/bin/c++
 
 //A wrapper around 'ar' adding the appropriate '--plugin' option
 // for the GCC compiler
-CMAKE_CXX_COMPILER_AR:FILEPATH=/usr/bin/gcc-ar-13
+CMAKE_CXX_COMPILER_AR:FILEPATH=/usr/bin/gcc-ar-14
 
 //A wrapper around 'ranlib' adding the appropriate '--plugin' option
 // for the GCC compiler
-CMAKE_CXX_COMPILER_RANLIB:FILEPATH=/usr/bin/gcc-ranlib-13
+CMAKE_CXX_COMPILER_RANLIB:FILEPATH=/usr/bin/gcc-ranlib-14
 
 //Flags used by the CXX compiler during all build types.
 CMAKE_CXX_FLAGS:STRING=
@@ -58,11 +58,11 @@ CMAKE_C_COMPILER:FILEPATH=/usr/bin/cc
 
 //A wrapper around 'ar' adding the appropriate '--plugin' option
 // for the GCC compiler
-CMAKE_C_COMPILER_AR:FILEPATH=/usr/bin/gcc-ar-13
+CMAKE_C_COMPILER_AR:FILEPATH=/usr/bin/gcc-ar-14
 
 //A wrapper around 'ranlib' adding the appropriate '--plugin' option
 // for the GCC compiler
-CMAKE_C_COMPILER_RANLIB:FILEPATH=/usr/bin/gcc-ranlib-13
+CMAKE_C_COMPILER_RANLIB:FILEPATH=/usr/bin/gcc-ranlib-14
 
 //Flags used by the C compiler during all build types.
 CMAKE_C_FLAGS:STRING=
@@ -271,9 +271,9 @@ CMAKE_CACHEFILE_DIR:INTERNAL=/home/zouari_omar/Documents/Daily/Projects/IoT_proj
 //Major version of cmake used to create the current loaded cache
 CMAKE_CACHE_MAJOR_VERSION:INTERNAL=3
 //Minor version of cmake used to create the current loaded cache
-CMAKE_CACHE_MINOR_VERSION:INTERNAL=29
+CMAKE_CACHE_MINOR_VERSION:INTERNAL=30
 //Patch version of cmake used to create the current loaded cache
-CMAKE_CACHE_PATCH_VERSION:INTERNAL=6
+CMAKE_CACHE_PATCH_VERSION:INTERNAL=3
 //ADVANCED property for variable: CMAKE_COLOR_MAKEFILE
 CMAKE_COLOR_MAKEFILE-ADVANCED:INTERNAL=1
 //Path to CMake executable.
@@ -376,7 +376,7 @@ CMAKE_RANLIB-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_READELF
 CMAKE_READELF-ADVANCED:INTERNAL=1
 //Path to CMake installation.
-CMAKE_ROOT:INTERNAL=/usr/share/cmake-3.29
+CMAKE_ROOT:INTERNAL=/usr/share/cmake-3.30
 //ADVANCED property for variable: CMAKE_SHARED_LINKER_FLAGS
 CMAKE_SHARED_LINKER_FLAGS-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_SHARED_LINKER_FLAGS_DEBUG
@@ -418,7 +418,7 @@ CURL_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CURL_LIBRARY_RELEASE
 CURL_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
 //Details about finding CURL
-FIND_PACKAGE_MESSAGE_DETAILS_CURL:INTERNAL=[/usr/lib/x86_64-linux-gnu/libcurl.so][/usr/include/x86_64-linux-gnu][c ][v8.9.1()]
+FIND_PACKAGE_MESSAGE_DETAILS_CURL:INTERNAL=[/usr/lib/x86_64-linux-gnu/libcurl.so][/usr/include/x86_64-linux-gnu][c ][v8.10.1()]
 PC_CURL_CFLAGS:INTERNAL=-I/usr/include/x86_64-linux-gnu;-I/usr/include;-I/usr/include/p11-kit-1
 PC_CURL_CFLAGS_I:INTERNAL=
 PC_CURL_CFLAGS_OTHER:INTERNAL=
@@ -436,9 +436,9 @@ PC_CURL_LIBS_OTHER:INTERNAL=
 PC_CURL_LIBS_PATHS:INTERNAL=
 PC_CURL_MODULE_NAME:INTERNAL=libcurl
 PC_CURL_PREFIX:INTERNAL=/usr
-PC_CURL_STATIC_CFLAGS:INTERNAL=-I/usr/include/x86_64-linux-gnu;-I/usr/include;-I/usr/include/p11-kit-1
+PC_CURL_STATIC_CFLAGS:INTERNAL=-I/usr/include/x86_64-linux-gnu;-I/usr/include;-I/usr/include/p11-kit-1;-DCURL_STATICLIB
 PC_CURL_STATIC_CFLAGS_I:INTERNAL=
-PC_CURL_STATIC_CFLAGS_OTHER:INTERNAL=
+PC_CURL_STATIC_CFLAGS_OTHER:INTERNAL=-DCURL_STATICLIB
 PC_CURL_STATIC_INCLUDE_DIRS:INTERNAL=/usr/include/x86_64-linux-gnu;/usr/include;/usr/include/p11-kit-1
 PC_CURL_STATIC_LDFLAGS:INTERNAL=-L/usr/lib/x86_64-linux-gnu;-lcurl;-lidn2;-lssh2;-lssl;-lcrypto;-lcrypto;-lgssapi_krb5;-llber;-lldap;-llber;-L/usr/lib/x86_64-linux-gnu;-L/usr/lib/x86_64-linux-gnu;-lunistring;-lz;-lbrotlidec;-L/usr/lib/x86_64-linux-gnu;-lbrotlicommon;-L/usr/lib;-lzstd;-pthread;-lssl;-L/usr/lib/x86_64-linux-gnu;-lz;-lzstd;-ldl;-pthread;-lcrypto;-lz;-lzstd;-ldl;-pthread;-lpsl;-lssh2;-L/usr/lib/x86_64-linux-gnu;-lssl;-L/usr/lib/x86_64-linux-gnu;-lcrypto;-lgpg-error;-L/usr/lib/x86_64-linux-gnu;-lssl;-L/usr/lib/x86_64-linux-gnu;-lz;-lzstd;-ldl;-pthread;-lcrypto;-lzstd;-ldl;-pthread;-lz;-lrtmp;-lz;-lgmp;-L/usr/lib/x86_64-linux-gnu;-lgnutls;-lgmp;-lunistring;-latomic;-L/usr/lib/x86_64-linux-gnu;-lnettle;-lgmp;-L/usr/lib/x86_64-linux-gnu;-lnettle;-ltasn1;-lidn2;-L/usr/lib/x86_64-linux-gnu;-lunistring;-lp11-kit;-lhogweed;-lgmp;-L/usr/lib/x86_64-linux-gnu;-lnettle;-lnghttp2
 PC_CURL_STATIC_LDFLAGS_OTHER:INTERNAL=-pthread;-pthread;-pthread;-pthread;-pthread
@@ -449,7 +449,7 @@ PC_CURL_STATIC_LIBS:INTERNAL=
 PC_CURL_STATIC_LIBS_L:INTERNAL=
 PC_CURL_STATIC_LIBS_OTHER:INTERNAL=
 PC_CURL_STATIC_LIBS_PATHS:INTERNAL=
-PC_CURL_VERSION:INTERNAL=8.9.1
+PC_CURL_VERSION:INTERNAL=8.10.1
 PC_CURL_libcurl_INCLUDEDIR:INTERNAL=
 PC_CURL_libcurl_LIBDIR:INTERNAL=
 PC_CURL_libcurl_PREFIX:INTERNAL=

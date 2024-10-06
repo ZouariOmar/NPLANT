@@ -27,17 +27,18 @@ size_t write_callback(void *ptr, size_t size, size_t nmemb, char *data) {
 /**
  * @brief ### The main C-Firebase HTTP Get Request function
  */
-void connectToFirebase() {
+void connectToFirebase(char *uid, char *data) {
   CURL *curl = curl_easy_init();
   CURLcode res;
-  char data[10000] = "";  // Buffer to store response data (or = {0})
+  char url[2048];
+  sprintf(url, URL, uid);  // Full url format (RTDB + uid)
 
   curl_global_init(CURL_GLOBAL_DEFAULT);
 
   if (curl) {
-    curl_easy_setopt(curl, CURLOPT_URL, URL);  // Set Firebase database URL
+    curl_easy_setopt(curl, CURLOPT_URL, url);  // Set Firebase database URL
 
-    // Specify the write callback function to handle the data
+    // Specify the write callback function to handle the data (@YoussefSaaidi2004 ya 7alawa)
     curl_easy_setopt(curl, CURLOPT_WRITEFUNCTION, write_callback);
     curl_easy_setopt(curl, CURLOPT_WRITEDATA, data);
 
@@ -47,7 +48,7 @@ void connectToFirebase() {
     if (res != CURLE_OK)
       fprintf(stderr, "curl_easy_perform() failed: %s\n", curl_easy_strerror(res));
     else
-      printf("Humidity: %s\n", data);
+      printf("%s", "HTTP 200: OK\n");
 
     // Cleanup the curl var
     curl_easy_cleanup(curl);

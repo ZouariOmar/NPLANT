@@ -1,20 +1,25 @@
+<!-- @format -->
+
 # IoT Plant Humidity Detector
 
 This project is a simple IoT solution to help plant owners monitor the humidity levels of their plants. The system uses an ESP32 to detect the humidity level of the soil. When the humidity falls below a predefined threshold, a notification/alert is sent to the plant owner via Firebase. The owner can also monitor the humidity level through a GUI application developed in C.
 
 ## Features
+
 - **Humidity Detection**: Continuously monitors the soil moisture level using a humidity sensor.
 - **Real-time Notifications**: Sends alerts via Firebase when the moisture level is too low.
 - **User-Friendly GUI**: A C-based desktop application that provides real-time data visualization of the plant’s humidity levels.
 - **WiFi Connectivity**: The ESP32 communicates with Firebase using WiFi.
-  
+
 ## Components
+
 - **ESP32**: The microcontroller that reads humidity data from the sensor and communicates with Firebase.
 - **Humidity Sensor**: Detects the moisture level in the soil.
 - **Firebase**: Acts as a real-time database and notification system.
 - **GUI App**: A C language-based desktop app for monitoring humidity in real-time.
 
 ## Hardware Requirements
+
 - ESP32
 - Soil moisture sensor
 - USB cable for ESP32 connection
@@ -22,6 +27,7 @@ This project is a simple IoT solution to help plant owners monitor the humidity 
 - Power source for the ESP32
 
 ## Software Requirements
+
 - **Arduino IDE or PlatformIO**: To program the ESP32.
 - **Firebase Account**: To set up the real-time database and notification system.
 - **C Compiler (GCC/MinGW)**: For compiling the desktop application.
@@ -29,11 +35,13 @@ This project is a simple IoT solution to help plant owners monitor the humidity 
 - **Firebase Library for ESP32**: Allows the ESP32 to interact with Firebase.
 
 ## System Architecture
+
 1. **ESP32 and Sensor**: The ESP32 reads soil moisture levels using the connected sensor.
 2. **Firebase Integration**: The ESP32 sends the moisture data to Firebase in real-time. If the moisture level falls below a set threshold, Firebase triggers a notification alert.
 3. **GUI App**: The desktop application connects to Firebase, visualizes the current humidity levels, and displays alerts when the plant needs watering.
 
 ## How it Works
+
 1. **Setup**: Place the soil moisture sensor into the plant's soil and connect it to the ESP32.
 2. **Monitoring**: The ESP32 reads the humidity level every few minutes and uploads the data to Firebase.
 3. **Alert**: If the moisture level drops below the predefined threshold, an alert is sent to the plant owner via Firebase Cloud Messaging.
@@ -42,9 +50,11 @@ This project is a simple IoT solution to help plant owners monitor the humidity 
 ## Setup Guide
 
 ### ESP32 Setup
+
 1. **Install Libraries**: Install the necessary libraries for Firebase and the moisture sensor:
-    - [Firebase ESP32 Library](https://github.com/mobizt/Firebase-ESP32)
-    - Adafruit Soil Moisture Sensor Library
+
+   - [Firebase ESP32 Library](https://github.com/mobizt/Firebase-ESP32)
+   - Adafruit Soil Moisture Sensor Library
 
 2. **Configure Firebase**: Set up a Firebase project and obtain your Firebase credentials (`projectID`, `databaseURL`, etc.).
 
@@ -95,3 +105,10 @@ void loop() {
 
   delay(60000); // Read sensor data every 1 minute
 }
+```
+
+## acknowledge
+
+- UID: [Unique Identification Number](https://en.wikipedia.org/wiki/Unique_identifier)
+
+- FRTDB: [Firebase Realtime Database](https://firebase.google.com/docs/database)
