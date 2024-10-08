@@ -8,6 +8,7 @@
  */
 
 //? -------------------- INCLUDE PROTOTYPE DECLARATION PART --------------------
+#include "../inc/connect.h"
 #include "../inc/inc.h"
 
 //* Init the main window
@@ -16,6 +17,9 @@ SDL_Window *window = NULL;
 //* Define the main window screen resolution
 const int SCREEN_WIDTH = 1920;
 const int SCREEN_HEIGHT = 1080;
+
+//* SDL_COLOR PUBLIC DECLARATION
+const SDL_Color WHITE = {255, 255, 255, 255};
 
 //? ----------------------- FUNCTIONS PROTOTYPE DEV PART -----------------------
 
@@ -26,7 +30,13 @@ void initEverything() {
   // Initialize SDL
   if (SDL_Init(SDL_INIT_VIDEO) < 0) {
     fprintf(stderr, "SDL could not initialize! SDL_Error: %s\n", SDL_GetError());
-    SDL_Quit();
+    exit(1);
+  }
+
+  // Initialize SDL-TTF
+  if (TTF_Init() < 0) {
+    printf("Couldn't initialize SDL TTF: %s\n", SDL_GetError());
+    exit(1);
   }
 
   // Create window
@@ -44,28 +54,76 @@ void closeEverything() {
   // Mix_CloseAudio();
   // IMG_Quit();
   // TTF_Quit();
-  SDL_Quit();
   SDL_DestroyWindow(window);
+  SDL_Quit();
 }
 
 /**
- * @brief ### Set the screen window mode
- * *
- * - x(0) - The screen will be in Windowed Mode
- * *
- * - x(SDL_WINDOW_FULLSCREEN) - The screen will be in Fullscreen Mode
- * @param x {int}
+ * @brief ### The sub main app entry function
  */
-inline void setScreen(int x) {
-  (!x) ? SDL_SetWindowFullscreen(window, 0) : SDL_SetWindowFullscreen(window, SDL_WINDOW_FULLSCREEN);
-}
+void __lance__() {
+  surface srf;
+  SDL_Texture *txt = NULL;
+  SDL_Surface *win = NULL;
 
-/**
- * @brief ### Free All Resources (range 0 to numberOfResources - 1)
- * @param sub {surface *}
- * @param nb_res {int}
- */
-void freeResources(surface *sub, int nb_res) {
-  for (int i = 0; i < nb_res; i++)
-    SDL_DestroyRenderer(sub[i].win);
+  srf.win = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED | SDL_RENDERER_PRESENTVSYNC);
+  TTF_Font *font = TTF_OpenFont("/home/zouari_omar/Documents/Daily/Projects/IoT_project/project/GUI/font/Roboto/Roboto-Black.ttf", 20);
+
+  bool quit = false;
+  SDL_Event e;
+
+  while (!quit) {
+    while (SDL_PollEvent(&e)) {
+      switch (e.type) {
+        case SDL_KEYDOWN:
+          if (e.key.keysym.sym == SDLK_f) {
+            // Fetch data from Firebase
+            char data[1000] = "";  // Hold the humidity value
+            connectToFirebase("H1AX5Pmp8mfBOHfyAWOIjpkSBuh1", data);
+
+            // Free existing texture if one already exists
+            if (txt) {
+              SDL_DestroyTexture(txt);
+              txt = NULL;
+            }
+
+            // Create a new surface with the fetched data
+            win = TTF_RenderText_Solid(font, data, WHITE);
+
+            // Set surface position and dimensions
+            srf.pos.x = 10;
+            srf.pos.y = 10;
+            srf.pos.w = win->w;
+            srf.pos.h = win->h;
+
+            // Create texture from surface before freeing it
+            txt = SDL_CreateTextureFromSurface(srf.win, win);
+
+            SDL_FreeSurface(win);  // Free surface after creating texture
+            win = NULL;
+          }
+          break;
+
+        case SDL_QUIT:
+          quit = true;
+          break;
+
+        default:
+          break;
+      }
+    }
+
+    SDL_RenderClear(srf.win);  // Clear previous render
+
+    // Render the texture if it exists
+    if (txt)
+      SDL_RenderCopy(srf.win, txt, NULL, &srf.pos);
+
+    SDL_RenderPresent(srf.win);  // Show render on window
+  }
+
+  // Clean up and close
+  SDL_DestroyTexture(txt);
+  TTF_CloseFont(font);
+  SDL_DestroyRenderer(srf.win);  // Added renderer cleanup
 }

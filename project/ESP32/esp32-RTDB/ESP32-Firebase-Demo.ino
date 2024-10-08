@@ -6,7 +6,7 @@
 #define WIFI_PASSWORD "YOUR_PASSWORD"
 
 /* 2. Define the API Key */
-#define API_KEY "YOUR_API_KEY"
+// #define API_KEY "YOUR_API_KEY"
 
 /* 3. Define the RTDB URL */
 #define DATABASE_URL "YOUR_RTDB_URL" 

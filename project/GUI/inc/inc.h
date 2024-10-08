@@ -49,6 +49,7 @@ typedef struct Surface {
 
 //? -------------------- FUNCTIONS PROTOTYPE DECLARATION PART --------------------
 void initEverything();
+void __lance__();
 void setScreen(int);
 SDL_Surface *load_img(const char *);
 void closeEverything();

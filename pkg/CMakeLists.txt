@@ -29,54 +29,34 @@ set(HEADERS
   ../project/GUI/modules/color.h
 )
 
+# Manually set SDL2_ttf paths
+set(SDL2_TTF_INCLUDE_DIRS "/usr/include/SDL2")  # Path to SDL2_ttf headers
+set(SDL2_TTF_LIBRARIES "/usr/lib/x86_64-linux-gnu/libSDL2_ttf.so")  # Path to SDL2_ttf library file
+
 # Add the executable target
 add_executable(${PROJECT_NAME} ${SOURCES} ${HEADERS})
 
 # Add compiler definitions
 add_definitions(-D_DEFAULT_SOURCE)
 
-# Platform-specific configurations
-if(WIN32)  # Windows-specific settings
-  set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -Wall -Wextra -g -D_WIN32")
-else()  # Linux-specific settings
-  set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -Wall -Wextra -g")
-endif()
+# Linux-specific settings
+set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -Wall -Wextra -g")
 
-# Include directories and libraries for Windows
-include_directories(${SDL2_INCLUDE_DIRS} ${SDL2_TTF_INCLUDE_DIRS} ${SDL2_IMAGE_INCLUDE_DIRS} ${SDL2_MIXER_INCLUDE_DIRS})
-target_link_libraries(${PROJECT_NAME}
-  ${SDL2_LIBRARIES}
-  ${SDL2_TTF_LIBRARIES}
-  ${SDL2_IMAGE_LIBRARIES}
-  ${SDL2_MIXER_LIBRARIES}
-  m # Math library (optional, but might be needed)
+# Include directories for all SDL2 components and CURL
+include_directories(
+  ${SDL2_INCLUDE_DIRS}
+  ${SDL2_TTF_INCLUDE_DIRS}
+  ${SDL2_IMAGE_INCLUDE_DIRS}
+  ${SDL2_MIXER_INCLUDE_DIRS}
+  ${CURL_INCLUDE_DIRS}
 )
 
-# Adding Manual Paths (if find_package fails for win32)
-# ! @Fraddosse1 you need to add the SDL2 path manually
-if (NOT SDL2_FOUND OR NOT SDL2_TTF_FOUND OR NOT SDL2_IMAGE_FOUND OR NOT SDL2_MIXER_FOUND AND WIN32)
-  message(STATUS "SDL2 or related libraries not found! Setting manually.")
-
-  set(SDL2_INCLUDE_DIRS "C:/path_to_sdl2_include")
-  set(SDL2_LIBRARIES "C:/path_to_sdl2_lib/SDL2.lib")
-
-  set(SDL2_TTF_INCLUDE_DIRS "C:/path_to_sdl2_ttf_include")
-  set(SDL2_TTF_LIBRARIES "C:/path_to_sdl2_ttf_lib/SDL2_ttf.lib")
-
-  set(SDL2_IMAGE_INCLUDE_DIRS "C:/path_to_sdl2_image_include")
-  set(SDL2_IMAGE_LIBRARIES "C:/path_to_sdl2_image_lib/SDL2_image.lib")
-
-  set(SDL2_MIXER_INCLUDE_DIRS "C:/path_to_sdl2_mixer_include")
-  set(SDL2_MIXER_LIBRARIES "C:/path_to_sdl2_mixer_lib/SDL2_mixer.lib")
-endif()
-
-# Final inclusion of directories and linking libraries
-include_directories(${SDL2_INCLUDE_DIRS} ${SDL2_TTF_INCLUDE_DIRS} ${SDL2_IMAGE_INCLUDE_DIRS} ${SDL2_MIXER_INCLUDE_DIRS})
+# Link SDL2 libraries, SDL2 extensions, CURL, and math library
 target_link_libraries(${PROJECT_NAME}
   ${SDL2_LIBRARIES}
   ${SDL2_TTF_LIBRARIES}
   ${SDL2_IMAGE_LIBRARIES}
   ${SDL2_MIXER_LIBRARIES}
-  CURL::libcurl
-  m
+  ${CURL_LIBRARIES}
+  m  # Math library on Linux
 )
