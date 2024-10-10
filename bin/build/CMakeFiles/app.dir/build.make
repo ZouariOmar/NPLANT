@@ -127,6 +127,8 @@ app: CMakeFiles/app.dir/build.make
 app: /usr/lib/x86_64-linux-gnu/libSDL2.so
 app: /usr/lib/x86_64-linux-gnu/libSDL2_ttf.so
 app: /usr/lib/x86_64-linux-gnu/libcurl.so
+app: /usr/lib/x86_64-linux-gnu/libcjson_utils.so.1.7.18
+app: /usr/lib/x86_64-linux-gnu/libcjson.so.1.7.18
 app: CMakeFiles/app.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/zouari_omar/Documents/Daily/Projects/IoT_project/bin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking C executable app"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/app.dir/link.txt --verbose=$(VERBOSE)

@@ -2,6 +2,8 @@ CMakeFiles/app.dir/home/zouari_omar/Documents/Daily/Projects/IoT_project/project
  /home/zouari_omar/Documents/Daily/Projects/IoT_project/project/GUI/src/connect.c \
  /usr/include/stdc-predef.h \
  /home/zouari_omar/Documents/Daily/Projects/IoT_project/project/GUI/src/../inc/connect.h \
+ /usr/include/cjson/cJSON.h \
+ /usr/lib/gcc/x86_64-linux-gnu/14/include/stddef.h \
  /usr/include/x86_64-linux-gnu/curl/curl.h \
  /usr/include/x86_64-linux-gnu/curl/curlver.h \
  /usr/include/x86_64-linux-gnu/curl/system.h \
@@ -20,7 +22,6 @@ CMakeFiles/app.dir/home/zouari_omar/Documents/Daily/Projects/IoT_project/project
  /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h \
  /usr/include/x86_64-linux-gnu/bits/types/time_t.h \
  /usr/include/x86_64-linux-gnu/bits/types/timer_t.h \
- /usr/lib/gcc/x86_64-linux-gnu/14/include/stddef.h \
  /usr/include/x86_64-linux-gnu/bits/stdint-intn.h /usr/include/endian.h \
  /usr/include/x86_64-linux-gnu/bits/endian.h \
  /usr/include/x86_64-linux-gnu/bits/endianness.h \
@@ -87,5 +88,8 @@ CMakeFiles/app.dir/home/zouari_omar/Documents/Daily/Projects/IoT_project/project
  /usr/include/x86_64-linux-gnu/curl/header.h \
  /usr/include/x86_64-linux-gnu/curl/websockets.h \
  /usr/include/x86_64-linux-gnu/curl/mprintf.h \
- /usr/include/x86_64-linux-gnu/curl/typecheck-gcc.h /usr/include/string.h \
+ /usr/include/x86_64-linux-gnu/curl/typecheck-gcc.h /usr/include/stdlib.h \
+ /usr/include/x86_64-linux-gnu/bits/waitflags.h \
+ /usr/include/x86_64-linux-gnu/bits/waitstatus.h /usr/include/alloca.h \
+ /usr/include/x86_64-linux-gnu/bits/stdlib-float.h /usr/include/string.h \
  /usr/include/strings.h

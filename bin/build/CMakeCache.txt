@@ -250,6 +250,9 @@ app_IS_TOP_LEVEL:STATIC=ON
 //Value Computed by CMake
 app_SOURCE_DIR:STATIC=/home/zouari_omar/Documents/Daily/Projects/IoT_project/pkg
 
+//The directory containing a CMake configuration file for cJSON.
+cJSON_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/cJSON
+
 //Path to a library.
 pkgcfg_lib_PC_CURL_curl:FILEPATH=/usr/lib/x86_64-linux-gnu/libcurl.so
 

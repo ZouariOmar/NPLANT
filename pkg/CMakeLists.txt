@@ -14,6 +14,7 @@ find_package(SDL2_ttf REQUIRED)
 find_package(SDL2_image REQUIRED)
 find_package(SDL2_mixer REQUIRED)
 find_package(CURL REQUIRED)
+find_package(cJSON REQUIRED)
 
 # Add the main window source files
 set(SOURCES
@@ -49,14 +50,16 @@ include_directories(
   ${SDL2_IMAGE_INCLUDE_DIRS}
   ${SDL2_MIXER_INCLUDE_DIRS}
   ${CURL_INCLUDE_DIRS}
+  ${CJSON_INCLUDE_DIRS}
 )
 
-# Link SDL2 libraries, SDL2 extensions, CURL, and math library
+# Link SDL2 libraries, SDL2 extensions, CURL, cJSON, and math library
 target_link_libraries(${PROJECT_NAME}
   ${SDL2_LIBRARIES}
   ${SDL2_TTF_LIBRARIES}
   ${SDL2_IMAGE_LIBRARIES}
   ${SDL2_MIXER_LIBRARIES}
   ${CURL_LIBRARIES}
+  ${CJSON_LIBRARIES}
   m  # Math library on Linux
 )

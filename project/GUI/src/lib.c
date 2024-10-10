@@ -76,7 +76,7 @@ void __lance__() {
     while (SDL_PollEvent(&e)) {
       switch (e.type) {
         case SDL_KEYDOWN:
-          if (e.key.keysym.sym == SDLK_f) {
+          if (e.key.keysym.sym == SDLK_F1) {
             // Fetch data from Firebase
             char data[1000] = "";  // Hold the humidity value
             connectToFirebase("H1AX5Pmp8mfBOHfyAWOIjpkSBuh1", data);
@@ -101,6 +101,8 @@ void __lance__() {
 
             SDL_FreeSurface(win);  // Free surface after creating texture
             win = NULL;
+          } else if (e.key.keysym.sym == SDLK_t) {
+            firebase_sign_in("testuser@example.com", "TestPassword123");
           }
           break;
 

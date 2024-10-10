@@ -1790,6 +1790,18 @@
 			"value" : "/home/zouari_omar/Documents/Daily/Projects/IoT_project/pkg"
 		},
 		{
+			"name" : "cJSON_DIR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "The directory containing a CMake configuration file for cJSON."
+				}
+			],
+			"type" : "PATH",
+			"value" : "/usr/lib/x86_64-linux-gnu/cmake/cJSON"
+		},
+		{
 			"name" : "pkgcfg_lib_PC_CURL_curl",
 			"properties" : 
 			[

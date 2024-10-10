@@ -13,7 +13,8 @@
 			"connect.h": "c",
 			"stdio.h": "c",
 			"string.h": "c",
-			"sdl_ttf.h": "c"
+			"sdl_ttf.h": "c",
+			"cjson.h": "c"
 		}
 	}
 }

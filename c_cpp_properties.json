@@ -15,7 +15,7 @@
 				"-Wno-error=narrowing"
 			],
 			"intelliSenseMode": "linux-gcc-x64",
-			"includePath": ["${workspaceFolder}/**"],
+			"includePath": ["${workspaceFolder}/**", "/usr/include/x86_64-linux-gnu/"],
 			"cStandard": "c99",
 			"cppStandard": "c++20",
 			"defines": [
