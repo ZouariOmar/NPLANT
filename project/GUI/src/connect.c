@@ -110,9 +110,8 @@ void firebase_sign_in(const char *email, const char *password) {
 
     // Perform the request
     res = curl_easy_perform(curl);
-    if (res != CURLE_OK) {
+    if (res != CURLE_OK)
       fprintf(stderr, "cURL failed: %s\n", curl_easy_strerror(res));
-    }
 
     // Clean up
     curl_easy_cleanup(curl);

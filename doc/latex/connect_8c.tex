@@ -1,0 +1,85 @@
+\doxysection{/home/zouari\+\_\+omar/\+Documents/\+Daily/\+Projects/\+Io\+T\+\_\+project/project/\+GUI/src/connect.c File Reference}
+\hypertarget{connect_8c}{}\label{connect_8c}\index{/home/zouari\_omar/Documents/Daily/Projects/IoT\_project/project/GUI/src/connect.c@{/home/zouari\_omar/Documents/Daily/Projects/IoT\_project/project/GUI/src/connect.c}}
+{\ttfamily \#include "{}../inc/connect.\+h"{}}\newline
+Include dependency graph for connect.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{connect_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+size\+\_\+t \mbox{\hyperlink{connect_8c_a729aa23e893bd6c5c36644e8af32b556}{write\+\_\+callback}} (void \texorpdfstring{$\ast$}{*}ptr, size\+\_\+t size, size\+\_\+t nmemb, char \texorpdfstring{$\ast$}{*}data)
+\begin{DoxyCompactList}\small\item\em \#\#\# Helper function \end{DoxyCompactList}\item 
+\Hypertarget{connect_8c_affe26fc45c14d5360d74b9b596a439e6}\label{connect_8c_affe26fc45c14d5360d74b9b596a439e6} 
+void {\bfseries connect\+To\+Firebase} (char \texorpdfstring{$\ast$}{*}uid, char \texorpdfstring{$\ast$}{*}data)
+\begin{DoxyCompactList}\small\item\em \#\#\# \+The main C-\/\+Firebase HTTP Get Request function \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{connect_8c_a51368b83540999728d4757464c351fab}{firebase\+\_\+sign\+\_\+in}} (const char \texorpdfstring{$\ast$}{*}email, const char \texorpdfstring{$\ast$}{*}password)
+\begin{DoxyCompactList}\small\item\em \#\#\# Sign in to the firebase Auth account using email and password \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyAuthor}{Author}
+Zouari\+Omar (\href{mailto:zouariomar20@gmail.com}{\texttt{ zouariomar20@gmail.\+com}}) 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2024-\/10-\/04 
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2024 \doxylink{}{@endlink}
+\end{DoxyCopyright}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{connect_8c_a51368b83540999728d4757464c351fab}\label{connect_8c_a51368b83540999728d4757464c351fab} 
+\index{connect.c@{connect.c}!firebase\_sign\_in@{firebase\_sign\_in}}
+\index{firebase\_sign\_in@{firebase\_sign\_in}!connect.c@{connect.c}}
+\doxysubsubsection{\texorpdfstring{firebase\_sign\_in()}{firebase\_sign\_in()}}
+{\footnotesize\ttfamily void firebase\+\_\+sign\+\_\+in (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{email,  }\item[{const char \texorpdfstring{$\ast$}{*}}]{password }\end{DoxyParamCaption})}
+
+
+
+\#\#\# Sign in to the firebase Auth account using email and password 
+
+We are using the POST HTTP REQUEST METHOD ! Not stable (Testing mode) \begin{DoxyRefDesc}{Bug}
+\item[\mbox{\hyperlink{bug__bug000001}{Bug}}]\{double free or corruption (!prev) ~\newline
+./run.sh\+: line 11\+: 99686 Aborted (core dumped) ./app\} \end{DoxyRefDesc}
+
+\begin{DoxyParams}{Parameters}
+{\em email} & \{const char \texorpdfstring{$\ast$}{*}\} \\
+\hline
+{\em password} & \{const char \texorpdfstring{$\ast$}{*}\} \\
+\hline
+\end{DoxyParams}
+! Testing part
+\begin{DoxyItemize}
+\item Passed! ? Tested in Postman
+\end{DoxyItemize}\Hypertarget{connect_8c_a729aa23e893bd6c5c36644e8af32b556}\label{connect_8c_a729aa23e893bd6c5c36644e8af32b556} 
+\index{connect.c@{connect.c}!write\_callback@{write\_callback}}
+\index{write\_callback@{write\_callback}!connect.c@{connect.c}}
+\doxysubsubsection{\texorpdfstring{write\_callback()}{write\_callback()}}
+{\footnotesize\ttfamily size\+\_\+t write\+\_\+callback (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{ptr,  }\item[{size\+\_\+t}]{size,  }\item[{size\+\_\+t}]{nmemb,  }\item[{char \texorpdfstring{$\ast$}{*}}]{data }\end{DoxyParamCaption})}
+
+
+
+\#\#\# Helper function 
+
+Help the curl\+\_\+easy\+\_\+setopt() to handel the data (humidity) 
+\begin{DoxyParams}{Parameters}
+{\em ptr} & \{void \texorpdfstring{$\ast$}{*}\} \\
+\hline
+{\em size} & \{size\+\_\+t\} \\
+\hline
+{\em nmemb} & \{size\+\_\+t\} \\
+\hline
+{\em data} & \{data \texorpdfstring{$\ast$}{*}\} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+size\+\_\+t 
+\end{DoxyReturn}
