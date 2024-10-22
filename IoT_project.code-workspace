@@ -16,7 +16,9 @@
 			"string.h": "c",
 			"sdl_ttf.h": "c",
 			"cjson.h": "c",
-			"ostream": "cpp"
+			"ostream": "cpp",
+			"gif_lib.h": "c",
+			"unistd.h": "c"
 		}
 	}
 }

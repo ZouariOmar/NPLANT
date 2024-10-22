@@ -28,6 +28,7 @@
 #include <SDL2/SDL_image.h>
 #include <SDL2/SDL_rect.h>
 #include <SDL2/SDL_ttf.h>
+//// #include <gif_lib.h>
 
 //? --------------------- PUBLIC VARS DECLARATION PART ---------------------
 //* SCREEN SURFACE DECLARATION
