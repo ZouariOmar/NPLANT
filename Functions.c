@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <SDL2/SDL.h>
 #include "Functions.h"
 
 void InitSDL(SDL_Window** Window, SDL_Renderer** Render)
@@ -8,6 +7,12 @@ void InitSDL(SDL_Window** Window, SDL_Renderer** Render)
     if(SDL_Init(SDL_INIT_VIDEO) != 0)
     {
         SDL_Log("ERREUR : Initialisation SDL > %s\n", SDL_GetError());
+        exit(EXIT_FAILURE);
+    }
+
+    if(!IMG_Init(IMG_INIT_PNG))
+    {
+        SDL_Log("ERREUR : Initialisation SDL_IMG > %s\n", SDL_GetError());
         exit(EXIT_FAILURE);
     }
 
