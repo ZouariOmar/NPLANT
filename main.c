@@ -1,21 +1,17 @@
 #include <stdio.h>
 #include "Functions.h"
 
-
-// Compile command : gcc -o bin/main.exe main.c Functions.c -I ./Src/include -L ./Src/lib -lmingw32 -lSDL2main -lSDL2 -lSDL2_image
+// Compile command : gcc -o bin/main.exe main.c Functions.c -I ./Src/include -L ./Src/lib -lmingw32 -lSDL2main -lSDL2 -lSDL2_image -lSDL2_ttf
 // Execute : ./bin/main
 
 int main( int argc, char* argv[] )
 {
-    SDL_Window* window = NULL;
-    SDL_Renderer* Render = NULL; // Utility ?
-    SDL_Event Event;
-
+    TTF_Font* Font;
     int Run = 1;
 
-    InitSDL(&window, &Render);
+    InitSDL();
 
-    SDL_Texture* img = IMG_LoadTexture(Render, "Assets/Test_img.png");
+    SDL_Texture* img = IMG_LoadTexture(Render, "Assets/Wallpaper.jpg");
 
     printf("> Generation completed\n\n");
 
@@ -29,13 +25,9 @@ int main( int argc, char* argv[] )
 
         SDL_RenderCopy(Render, img, NULL, NULL);
         SDL_RenderPresent(Render);
-        //SDL_UpdateWindowSurface(window); // Why ? What difference with render present ?
     }
 
-    SDL_DestroyRenderer(Render);
-    SDL_DestroyWindow(window);
-    IMG_Quit();
-    SDL_Quit();
+    SDLFree();
 
     return 0;
 }

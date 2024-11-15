@@ -54,5 +54,8 @@
 	"C_Cpp_Runner.useLinkTimeOptimization": false,
 	"C_Cpp_Runner.msvcSecureNoWarnings": false,
 	"cmake.sourceDirectory": "/home/zouari_omar/Documents/Daily/Projects/IoT_project/pkg",
-	"C_Cpp.errorSquiggles": "enabled"
+	"C_Cpp.errorSquiggles": "enabled",
+	"files.associations": {
+		"functions.h": "c"
+	}
 }
