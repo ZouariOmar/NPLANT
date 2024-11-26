@@ -6,14 +6,11 @@
 
 int main( int argc, char* argv[] )
 {
-    TTF_Font* Font;
+    UI Interface;
     int Run = 1;
 
     InitSDL();
-
-    SDL_Texture* img = IMG_LoadTexture(Render, "Assets/Wallpaper.jpg");
-
-    printf("> Generation completed\n\n");
+    InitUI(&Interface);
 
     while(Run)
     {
@@ -23,7 +20,7 @@ int main( int argc, char* argv[] )
                 Run = 0;
         }
 
-        SDL_RenderCopy(Render, img, NULL, NULL);
+        //SDL_RenderCopy(Render, img, NULL, NULL);
         SDL_RenderPresent(Render);
     }
 

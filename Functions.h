@@ -5,17 +5,59 @@
 
 #define H 1080       // Height of the screen resolution
 #define W 1920       // Width of the screen resolution
-#define iMax 1000     // Maximum iterations
+
+typedef struct Text{
+    char Txt[50];
+    TTF_Font* Font;
+    SDL_Color Txt_Color;
+    SDL_Surface* Surface_txt;
+    SDL_Rect Txt_pos;
+}Text;
+
+/*
+    > Structure containing Text features :
+        - Message
+        - Type of font
+        - Text color
+        - Surface of the text ( Will be converted to texture with "SDL_CreateTextureFromSurface")
+        - Texture of the text
+        - Text position
+*/
+
+typedef struct Button{
+    SDL_Texture* img;
+    SDL_Rect pos;
+}Button;
+
+/*
+    > Structure containing button features :
+        - Image of the button
+        - Position of the button
+*/
 
 typedef struct UI{
     SDL_Texture* Background;
-    SDL_Texture* Link_img;
-    SDL_Rect Link_pos;
+    Button Link; 
+    Text Input;
 }UI;
+
+/*
+    > Structure containing the UI specificities :
+        - Background image
+        - Link image ( When mouse is over it )
+        - Position of the image of the link
+        - Text input
+*/
 
 ///////////////////////////////////////////////////////////////
 
 void InitSDL(void);
+
+void InitTxtColor(SDL_Color* Color);
+
+void CreateTxtSurface(Text* Message);
+
+void InitTxt(Text* Message);
 
 void SDLFree(void);
 
