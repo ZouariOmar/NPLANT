@@ -66,6 +66,9 @@ void SDLFree(UI* Interface);
 // Initialization of the color of the text (White)
 void InitTxtColor(SDL_Color* Color);
 
+// Initialization of the position of the text
+void InitTxtPos(SDL_Rect* pos);
+
 // Initialization of the text content ("")
 void InitInput(Text* Message);
 

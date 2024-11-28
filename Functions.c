@@ -66,6 +66,15 @@ void InitTxtColor(SDL_Color* Color) {
 
 //////////////////////////////////////////////////////////////////////////
 
+void InitTxtPos(SDL_Rect* pos){
+    pos->x = 200;
+    pos->y = 200;
+    pos->w = 0;
+    pos->h = 0;
+}
+
+//////////////////////////////////////////////////////////////////////////
+
 void InitInput(Text* Input) {
     Input->Font = TTF_OpenFont("Font/ARIAL.TTF", 24);
     if (!(Input->Font)) {
@@ -78,6 +87,9 @@ void InitInput(Text* Input) {
 
     // Init colors of the text
     InitTxtColor(&(Input->Txt_Color));
+
+    // Init text position
+    InitTxtPos(&(Input->Txt_pos));
 
     // Init text surface
     Input->Surface_txt = NULL;
@@ -144,12 +156,15 @@ void UpdateTxtTexture(Text* Input) {
         SDL_DestroyTexture(Input->Texture_txt);
 
     // Create new text surface
-    
     Input->Surface_txt = TTF_RenderText_Solid(Input->Font, Input->Txt, Input->Txt_Color);
     if(!Input->Surface_txt){
         printf("> Erreur lors de la création de la surface du texte : %s\n", TTF_GetError());
         return;
     }
+
+    // Update the width and lenght of the text
+    Input->Txt_pos.w = Input->Surface_txt->w;
+    Input->Txt_pos.h = Input->Surface_txt->h;
 
     // Create new text texture
     Input->Texture_txt = SDL_CreateTextureFromSurface(Render, Input->Surface_txt);
@@ -178,7 +193,7 @@ void RenderUI(UI Interface) {
     SDL_RenderCopy(Render, Interface.Link.img, &Interface.Link.pos, &Interface.Link.pos);
 
     // Prepare text rendering
-    SDL_RenderCopy(Render, Interface.Input.Texture_txt, NULL, &Interface.Link.pos);
+    SDL_RenderCopy(Render, Interface.Input.Texture_txt, NULL, &(Interface.Input.Txt_pos));
 
     // Render the new frame to the screen
     SDL_RenderPresent(Render);
