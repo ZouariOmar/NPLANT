@@ -12,6 +12,7 @@ typedef struct Text{
     TTF_Font* Font;
     SDL_Color Txt_Color;
     SDL_Surface* Surface_txt;
+    SDL_Texture* Texture_txt;
     SDL_Rect Txt_pos;
 }Text;
 
@@ -54,18 +55,22 @@ typedef struct UI{
 
 void InitSDL(void);
 
+void SDLFree(void);
+
 void InitTxtColor(SDL_Color* Color);
 
-void CreateTxtSurface(Text* Message);
+void InitInput(Text* Message);
 
-void InitTxt(Text* Message);
+void InitButton(Button* Link);
 
 void InitUI(UI* Interface);
 
-void UpdateInput(Text* Input);
+void UpdateInput(char Txt[]);
+
+void UpdateTxtTexture(Text* Input);
+
+void UpdateTxtRendering(Text* Input);
 
 void RenderUI(UI Interface);
-
-void SDLFree(void);
 
 #endif

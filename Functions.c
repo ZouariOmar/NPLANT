@@ -64,13 +64,6 @@ void InitTxtColor(SDL_Color* Color) {
     Color->a = 255;
 }
 
-void CreateTxtSurface(Text* Input) {
-    // Init Input surface
-    Input->Surface_txt = TTF_RenderText_Solid(Input->Font,Input->Txt,Input->Txt_Color);
-    if(!Input->Surface_txt)
-        printf("> Erreur lors de la création du texte : %s\n", TTF_GetError());
-}
-
 void InitInput(Text* Input) {
     Input->Font = TTF_OpenFont("Font/ARIAL.TTF", 24);
     if (!(Input->Font)) {
@@ -84,9 +77,9 @@ void InitInput(Text* Input) {
     // Init colors of the text
     InitTxtColor(&(Input->Txt_Color));
 
-    // Create the surface of the text
-    CreateTxtSurface(Input);
-    
+    // Init text surface
+    Input->Surface_txt = NULL;
+    Input->Texture_txt = NULL;
 }
 
 /* -------------- LINK BUTTON INITIALIZATION -------------- */
@@ -118,23 +111,55 @@ void InitUI(UI* Interface) {
 
 /* ================= INPUT UPDATE ================= */
 
-void UpdateInput(Text* Input){
+void UpdateInput(char Txt[]) {
     char c;
-    int Input_l = strlen(Input->Txt);
+    int Input_l = strlen(Txt);
 
-    //
+    // If the ASCII code between a and z and length of the input text < LenTxt (max characters) => Add the character to the input text
     if((Event.key.keysym.sym >= 33 && Event.key.keysym.sym <= 126) && (Input_l<LenTxt)){
         c = (char)Event.key.keysym.sym;
-        Input->Txt[Input_l] = c;
-        Input->Txt[Input_l+1] = '\0';
+        Txt[Input_l] = c;
+        Txt[Input_l+1] = '\0';
     }
     
-    else if(Event.key.keysym.sym == SDLK_BACKSPACE){
-        Input->Txt[Input_l-1] = '\0';
-        //Input->Txt[Input_l+1] = '\0';
+    // If the ASCII code is the backspace then delete the last character
+    else if(Event.key.keysym.sym == SDLK_BACKSPACE)
+        Txt[Input_l-1] = '\0';
+}
+
+void UpdateTxtTexture(Text* Input) {
+
+    // Free the old text surface
+    if(Input->Surface_txt){
+        SDL_FreeSurface(Input->Surface_txt);
+        Input->Texture_txt = NULL;
     }
 
-    printf("Input : %s\n", Input->Txt);
+    // Free the old text texture
+    if(Input->Texture_txt)
+        SDL_DestroyTexture(Input->Texture_txt);
+
+    // Create new text surface
+    
+    Input->Surface_txt = TTF_RenderText_Solid(Input->Font, Input->Txt, Input->Txt_Color);
+    if(!Input->Surface_txt){
+        printf("> Erreur lors de la création de la surface du texte : %s\n", TTF_GetError());
+        return;
+    }
+
+    // Create new text texture
+    Input->Texture_txt = SDL_CreateTextureFromSurface(Render, Input->Surface_txt);
+    if(!Input->Texture_txt)
+        printf("> Erreur lors de la création de la texture du texte : %s\n", SDL_GetError());
+    
+}
+
+void UpdateTxtRendering(Text* Input) {
+    // Update text content through input detection
+    UpdateInput(Input->Txt);
+
+    // Update text texture
+    UpdateTxtTexture(Input);
 }
 
 /* ================= RENDERING ================= */
@@ -148,6 +173,9 @@ void RenderUI(UI Interface) {
     // Prepare Link background rendering
     SDL_RenderCopy(Render, Interface.Link.img, &Interface.Link.pos, &Interface.Link.pos);
 
-    // 
+    // Prepare text rendering
+    SDL_RenderCopy(Render, Interface.Input.Texture_txt, NULL, &Interface.Link.pos);
+
+    // Render the new frame to the screen
     SDL_RenderPresent(Render);
 }

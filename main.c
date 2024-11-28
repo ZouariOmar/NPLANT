@@ -19,13 +19,15 @@ int main( int argc, char* argv[] )
             if(Event.type == SDL_QUIT || Event.type == SDL_KEYDOWN && Event.key.keysym.sym == SDLK_ESCAPE)
                 Run = 0;
             
-            else if(Event.type == SDL_KEYDOWN){
-                UpdateInput(&(Interface.Input));
-            }
+            else if(Event.type == SDL_KEYDOWN){}
+                UpdateTxtRendering(&(Interface.Input));
+            
+            // Render UI
+            RenderUI(Interface);
         }
 
-        // Render UI
-        RenderUI(Interface);
+        // Delay
+        SDL_Delay(100);
     }
 
     SDLFree();
