@@ -6,8 +6,6 @@ SDL_Window* Window = NULL;
 SDL_Renderer* Render = NULL;
 SDL_Event Event;
 
-/* -------------- INIT AND FREE SDL -------------- */
-
 void InitSDL(void) {
     if(SDL_Init(SDL_INIT_VIDEO) != 0)
     {
@@ -45,7 +43,11 @@ void InitSDL(void) {
     }
 }
 
-void SDLFree(void) {
+//////////////////////////////////////////////////////////////////////////
+
+void SDLFree(UI* Interface) {
+    SDL_FreeSurface(Interface->Input.Surface_txt);
+    SDL_DestroyTexture(Interface->Input.Texture_txt);
     SDL_DestroyRenderer(Render);
     SDL_DestroyWindow(Window);
     IMG_Quit();
@@ -53,9 +55,7 @@ void SDLFree(void) {
     SDL_Quit();
 }
 
-/* ================= INITIALIZATION OF THE INTERFACE ================= */
-
-/* -------------- INPUT INITIALIZATION -------------- */
+//////////////////////////////////////////////////////////////////////////
 
 void InitTxtColor(SDL_Color* Color) {
     Color->r = 255;
@@ -63,6 +63,8 @@ void InitTxtColor(SDL_Color* Color) {
     Color->b = 255;
     Color->a = 255;
 }
+
+//////////////////////////////////////////////////////////////////////////
 
 void InitInput(Text* Input) {
     Input->Font = TTF_OpenFont("Font/ARIAL.TTF", 24);
@@ -82,13 +84,13 @@ void InitInput(Text* Input) {
     Input->Texture_txt = NULL;
 }
 
-/* -------------- LINK BUTTON INITIALIZATION -------------- */
+//////////////////////////////////////////////////////////////////////////
 
-void InitButton(Button* Link) {
-    // Init the link button image
+void InitTA(TA* Link) {
+    // Init the link TA image
     Link->img = IMG_LoadTexture(Render, "Assets/Link_img.jpeg");
 
-    // Init the link button position
+    // Init the link TA position
     // !! NEED TO CHECK PSD FILE !!
     Link->pos.x = 200;
     Link->pos.y = 200;
@@ -96,7 +98,7 @@ void InitButton(Button* Link) {
     Link->pos.h = 50;
 }
 
-/* -------------- UI INITIALIZATION -------------- */
+//////////////////////////////////////////////////////////////////////////
 
 void InitUI(UI* Interface) {
     // Init Text
@@ -105,11 +107,11 @@ void InitUI(UI* Interface) {
     // Init background image
     Interface->Background = IMG_LoadTexture(Render, "Assets/Wallpaper.jpg");
 
-    // Init link button
-    InitButton(&(Interface->Link));
+    // Init link TA
+    InitTA(&(Interface->Link));
 }
 
-/* ================= INPUT UPDATE ================= */
+//////////////////////////////////////////////////////////////////////////
 
 void UpdateInput(char Txt[]) {
     char c;
@@ -126,6 +128,8 @@ void UpdateInput(char Txt[]) {
     else if(Event.key.keysym.sym == SDLK_BACKSPACE)
         Txt[Input_l-1] = '\0';
 }
+
+//////////////////////////////////////////////////////////////////////////
 
 void UpdateTxtTexture(Text* Input) {
 
@@ -154,6 +158,8 @@ void UpdateTxtTexture(Text* Input) {
     
 }
 
+//////////////////////////////////////////////////////////////////////////
+
 void UpdateTxtRendering(Text* Input) {
     // Update text content through input detection
     UpdateInput(Input->Txt);
@@ -162,9 +168,7 @@ void UpdateTxtRendering(Text* Input) {
     UpdateTxtTexture(Input);
 }
 
-/* ================= RENDERING ================= */
-
-/* -------------- INTERFACE RENDERING  -------------- */
+//////////////////////////////////////////////////////////////////////////
 
 void RenderUI(UI Interface) {
     // Prepare UI background rendering
@@ -179,3 +183,5 @@ void RenderUI(UI Interface) {
     // Render the new frame to the screen
     SDL_RenderPresent(Render);
 }
+
+//////////////////////////////////////////////////////////////////////////

@@ -26,20 +26,20 @@ typedef struct Text{
         - Text position
 */
 
-typedef struct Button{
+typedef struct TextArea{
     SDL_Texture* img;
     SDL_Rect pos;
-}Button;
+}TA;
 
 /*
-    > Structure containing button features :
-        - Image of the button
-        - Position of the button
+    > Structure containing the text area features :
+        - Image of the text area
+        - Position of the text area
 */
 
-typedef struct UI{
+typedef struct UserInterface{
     SDL_Texture* Background;
-    Button Link; 
+    TA Link; 
     Text Input;
 }UI;
 
@@ -53,24 +53,44 @@ typedef struct UI{
 
 ///////////////////////////////////////////////////////////////
 
+/* ================= INIT AND FREE SDL ================= */
+
+// Initialization of SDL
 void InitSDL(void);
 
-void SDLFree(void);
+// Free SDL + Surface and Texture memory allocations
+void SDLFree(UI* Interface);
 
+/* ================= INITIALIZATION OF THE INTERFACE ================= */
+
+// Initialization of the color of the text (White)
 void InitTxtColor(SDL_Color* Color);
 
+// Initialization of the text content ("")
 void InitInput(Text* Message);
 
-void InitButton(Button* Link);
+// Initialization of the link text area
+void InitTA(TA* Link);
 
+// Initialization of the User interface
 void InitUI(UI* Interface);
 
+/* ================= INPUT UPDATE ================= */
+
+// Update of the users input
 void UpdateInput(char Txt[]);
 
+// Update of the input texture
 void UpdateTxtTexture(Text* Input);
 
+// Update of the input rendering
 void UpdateTxtRendering(Text* Input);
 
+/* ================= RENDERING ================= */
+
+// Render the User inteface to the screen
 void RenderUI(UI Interface);
+
+//////////////////////////////////////////////////////////////////////////
 
 #endif
