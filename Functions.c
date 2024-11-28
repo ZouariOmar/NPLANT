@@ -53,6 +53,8 @@ void SDLFree(void) {
     SDL_Quit();
 }
 
+/* ================= INITIALIZATION OF THE INTERFACE ================= */
+
 /* -------------- INPUT INITIALIZATION -------------- */
 
 void InitTxtColor(SDL_Color* Color) {
@@ -83,7 +85,7 @@ void InitInput(Text* Input) {
     InitTxtColor(&(Input->Txt_Color));
 
     // Create the surface of the text
-    CreateTxtSurface(Input->Surface_txt);
+    CreateTxtSurface(Input);
     
 }
 
@@ -91,14 +93,14 @@ void InitInput(Text* Input) {
 
 void InitButton(Button* Link) {
     // Init the link button image
-    Link->img = IMG_LoadTexture(Render, "Assets/...");
+    Link->img = IMG_LoadTexture(Render, "Assets/Link_img.jpeg");
 
     // Init the link button position
-    // !! Need to check PSD file !!
-    Link->pos.x = 0;
-    Link->pos.y = 0;
-    Link->pos.w = 0;
-    Link->pos.h = 0;
+    // !! NEED TO CHECK PSD FILE !!
+    Link->pos.x = 200;
+    Link->pos.y = 200;
+    Link->pos.w = 400;
+    Link->pos.h = 50;
 }
 
 /* -------------- UI INITIALIZATION -------------- */
@@ -112,4 +114,40 @@ void InitUI(UI* Interface) {
 
     // Init link button
     InitButton(&(Interface->Link));
+}
+
+/* ================= INPUT UPDATE ================= */
+
+void UpdateInput(Text* Input){
+    char c;
+    int Input_l = strlen(Input->Txt);
+
+    //
+    if((Event.key.keysym.sym >= 33 && Event.key.keysym.sym <= 126) && (Input_l<LenTxt)){
+        c = (char)Event.key.keysym.sym;
+        Input->Txt[Input_l] = c;
+        Input->Txt[Input_l+1] = '\0';
+    }
+    
+    else if(Event.key.keysym.sym == SDLK_BACKSPACE){
+        Input->Txt[Input_l-1] = '\0';
+        //Input->Txt[Input_l+1] = '\0';
+    }
+
+    printf("Input : %s\n", Input->Txt);
+}
+
+/* ================= RENDERING ================= */
+
+/* -------------- INTERFACE RENDERING  -------------- */
+
+void RenderUI(UI Interface) {
+    // Prepare UI background rendering
+    SDL_RenderCopy(Render, Interface.Background, NULL, NULL);
+
+    // Prepare Link background rendering
+    SDL_RenderCopy(Render, Interface.Link.img, &Interface.Link.pos, &Interface.Link.pos);
+
+    // 
+    SDL_RenderPresent(Render);
 }

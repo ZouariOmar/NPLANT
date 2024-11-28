@@ -18,10 +18,14 @@ int main( int argc, char* argv[] )
         {
             if(Event.type == SDL_QUIT || Event.type == SDL_KEYDOWN && Event.key.keysym.sym == SDLK_ESCAPE)
                 Run = 0;
+            
+            else if(Event.type == SDL_KEYDOWN){
+                UpdateInput(&(Interface.Input));
+            }
         }
 
-        //SDL_RenderCopy(Render, img, NULL, NULL);
-        SDL_RenderPresent(Render);
+        // Render UI
+        RenderUI(Interface);
     }
 
     SDLFree();

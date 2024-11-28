@@ -5,9 +5,10 @@
 
 #define H 1080       // Height of the screen resolution
 #define W 1920       // Width of the screen resolution
+#define LenTxt 28    // Lenth of the input text
 
 typedef struct Text{
-    char Txt[50];
+    char Txt[LenTxt];
     TTF_Font* Font;
     SDL_Color Txt_Color;
     SDL_Surface* Surface_txt;
@@ -58,6 +59,12 @@ void InitTxtColor(SDL_Color* Color);
 void CreateTxtSurface(Text* Message);
 
 void InitTxt(Text* Message);
+
+void InitUI(UI* Interface);
+
+void UpdateInput(Text* Input);
+
+void RenderUI(UI Interface);
 
 void SDLFree(void);
 
