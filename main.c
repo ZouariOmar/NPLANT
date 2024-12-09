@@ -30,7 +30,7 @@ int main( int argc, char* argv[] )
             RenderUI(Interface);
         }
 
-        // Delay
+        // Delay of 100ms
         SDL_Delay(100);
     }
 
