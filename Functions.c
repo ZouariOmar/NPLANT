@@ -128,10 +128,16 @@ void InitUI(UI* Interface) {
 void UpdateInput(char Txt[]) {
     char c;
     int Input_l = strlen(Txt);
+    int sym = (int)(Event.key.keysym.sym);
 
     // If the ASCII code between a and z and length of the input text < LenTxt (max characters) => Add the character to the input text
     if((Event.key.keysym.sym >= 33 && Event.key.keysym.sym <= 126) && (Input_l<LenTxt)){
-        c = (char)Event.key.keysym.sym;
+        if(Event.key.keysym.mod & KMOD_SHIFT ||Event.key.keysym.mod & KMOD_CAPS)
+            c = (char)(sym - 32);     
+        else
+            c = (char)sym;
+
+        printf("%c\n",c);
         Txt[Input_l] = c;
         Txt[Input_l+1] = '\0';
     }
