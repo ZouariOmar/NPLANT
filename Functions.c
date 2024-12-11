@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 #include "Functions.h"
 
 SDL_Window* Window = NULL;
@@ -130,16 +131,24 @@ void UpdateInput(char Txt[]) {
     int Input_l = strlen(Txt);
     int sym = (int)(Event.key.keysym.sym);
 
-    // If the ASCII code between a and z and length of the input text < LenTxt (max characters) => Add the character to the input text
+    // If the ASCII code between A and z and length of the input text < LenTxt (max characters) => Add the character to the input text
     if((Event.key.keysym.sym >= 33 && Event.key.keysym.sym <= 126) && (Input_l<LenTxt)){
-        if(Event.key.keysym.mod & KMOD_SHIFT ||Event.key.keysym.mod & KMOD_CAPS)
-            c = (char)(sym - 32);     
-        else
-            c = (char)sym;
+        // Check paste command
+        if(Event.key.keysym.mod & KMOD_CTRL && Event.key.keysym.sym == SDLK_v)
+            strcpy(Txt, SDL_GetClipboardText());
 
-        printf("%c\n",c);
-        Txt[Input_l] = c;
-        Txt[Input_l+1] = '\0';
+        // Check normal input
+        else {
+            // Check if it's a capital letter or not
+            if(Event.key.keysym.mod & KMOD_SHIFT || Event.key.keysym.mod & KMOD_CAPS)
+                c = (char)(sym - 32);     
+            else
+                c = (char)sym;
+
+            Txt[Input_l] = c;
+            Txt[Input_l+1] = '\0';
+        }
+
     }
     
     // If the ASCII code is the backspace then delete the last character
@@ -164,7 +173,7 @@ void UpdateTxtTexture(Text* Input) {
     // Create new text surface
     Input->Surface_txt = TTF_RenderText_Solid(Input->Font, Input->Txt, Input->Txt_Color);
     if(!Input->Surface_txt){
-        printf("> Erreur lors de la création de la surface du texte : %s\n", TTF_GetError());
+        printf("> Erreur lors de la creation de la surface du texte : %s\n", TTF_GetError());
         return;
     }
 
