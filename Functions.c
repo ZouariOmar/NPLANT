@@ -51,6 +51,8 @@ void SDLFree(UI* Interface) {
     SDL_DestroyTexture(Interface->Error.Texture_txt);
     SDL_FreeSurface(Interface->Input.Surface_txt);
     SDL_DestroyTexture(Interface->Input.Texture_txt);
+    SDL_FreeSurface(Interface->Output.Surface_txt);
+    SDL_DestroyTexture(Interface->Output.Texture_txt);
     SDL_DestroyRenderer(Render);
     SDL_DestroyWindow(Window);
     IMG_Quit();
