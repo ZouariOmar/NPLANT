@@ -10,6 +10,7 @@
 #define HeightBUTTON 62   // Height of the link button
 
 typedef struct Text{
+    // User input
     char Txt[LenTxt];
     TTF_Font* Font;
     SDL_Color Txt_Color;
@@ -31,7 +32,7 @@ typedef struct Text{
 typedef struct Background{
     SDL_Texture* BG_Unselect;
     SDL_Texture* BG_Select;
-    SDL_Rect Button_pos;
+    SDL_Rect Btn_pos;
 }BG;
 
 /*
@@ -44,6 +45,9 @@ typedef struct Background{
 typedef struct UserInterface{
     BG Background;
     Text Input;
+    Text Error;
+    int Check_Error,
+        Btn_press;
 }UI;
 
 /*
@@ -67,13 +71,16 @@ void SDLFree(UI* Interface);
 /* ================= INITIALIZATION OF THE INTERFACE ================= */
 
 // Initialization of the color of the text (White)
-void InitTxtColor(SDL_Color* Color);
+void InitTxtColor(SDL_Color* Color, Uint8 r, Uint8 g, Uint8 b, Uint8 a);
 
 // Initialization of the position of the text
-void InitTxtPos(SDL_Rect* pos);
+void InitTxtPos(SDL_Rect* pos, int x, int y, int w, int h);
 
-// Initialization of the text content ("")
-void InitInput(Text* Message);
+// Initialization of the input
+void InitInput(Text* Input);
+
+// Initialization of the error
+void InitError(Text* Error);
 
 // Initialization of the User interface
 void InitUI(UI* Interface);
@@ -81,13 +88,13 @@ void InitUI(UI* Interface);
 /* ================= INPUT UPDATE ================= */
 
 // Update of the users input
-void UpdateInput(char Txt[]);
+void UpdateInput(UI* Interface);
 
 // Update of the input texture
 void UpdateTxtTexture(Text* Input);
 
 // Update of the input rendering
-void UpdateTxtRendering(Text* Input);
+void UpdateTxtRendering(UI* Interface);
 
 /* ================= BUTTON UPDATE ================= */
 

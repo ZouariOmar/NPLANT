@@ -28,7 +28,7 @@ int main( int argc, char* argv[] )
             
             // Manage other key inputs
             else if(Event.type == SDL_KEYDOWN)
-                UpdateTxtRendering(&(Interface.Input));
+                UpdateTxtRendering(&Interface);
             
             // Render UI
             RenderUI(Interface);
