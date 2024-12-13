@@ -6,6 +6,8 @@
 #define H 1080       // Height of the screen resolution
 #define W 1920       // Width of the screen resolution
 #define LenTxt 28    // Lenth of the input text
+#define WidthBUTTON 170   // Width of the link button
+#define HeightBUTTON 62   // Height of the link button
 
 typedef struct Text{
     char Txt[LenTxt];
@@ -26,20 +28,21 @@ typedef struct Text{
         - Text position
 */
 
-typedef struct TextArea{
-    SDL_Texture* img;
-    SDL_Rect pos;
-}TA;
+typedef struct Background{
+    SDL_Texture* BG_Unselect;
+    SDL_Texture* BG_Select;
+    SDL_Rect Button_pos;
+}BG;
 
 /*
-    > Structure containing the text area features :
-        - Image of the text area
-        - Position of the text area
+    > Structure containing background features :
+        - Background with unselected link button
+        - Background with selected link button
+        - Link button position
 */
 
 typedef struct UserInterface{
-    SDL_Texture* Background;
-    TA Link; 
+    BG Background;
     Text Input;
 }UI;
 
@@ -72,9 +75,6 @@ void InitTxtPos(SDL_Rect* pos);
 // Initialization of the text content ("")
 void InitInput(Text* Message);
 
-// Initialization of the link text area
-void InitTA(TA* Link);
-
 // Initialization of the User interface
 void InitUI(UI* Interface);
 
@@ -88,6 +88,11 @@ void UpdateTxtTexture(Text* Input);
 
 // Update of the input rendering
 void UpdateTxtRendering(Text* Input);
+
+/* ================= BUTTON UPDATE ================= */
+
+// Update the image of the button
+void CheckLinkButton(UI Interface);
 
 /* ================= RENDERING ================= */
 

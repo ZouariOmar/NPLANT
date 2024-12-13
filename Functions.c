@@ -68,8 +68,8 @@ void InitTxtColor(SDL_Color* Color) {
 //////////////////////////////////////////////////////////////////////////
 
 void InitTxtPos(SDL_Rect* pos){
-    pos->x = 200;
-    pos->y = 200;
+    pos->x = 180;
+    pos->y = 230;
     pos->w = 0;
     pos->h = 0;
 }
@@ -77,7 +77,7 @@ void InitTxtPos(SDL_Rect* pos){
 //////////////////////////////////////////////////////////////////////////
 
 void InitInput(Text* Input) {
-    Input->Font = TTF_OpenFont("Font/ARIAL.TTF", 24);
+    Input->Font = TTF_OpenFont("Font/ARIAL.TTF", 30);
     if (!(Input->Font)) {
         printf("> Erreur lors du chargement de la police : %s\n", TTF_GetError());
         return ;
@@ -99,29 +99,17 @@ void InitInput(Text* Input) {
 
 //////////////////////////////////////////////////////////////////////////
 
-void InitTA(TA* Link) {
-    // Init the link TA image
-    Link->img = IMG_LoadTexture(Render, "Assets/Link_img.jpeg");
-
-    // Init the link TA position
-    // !! NEED TO CHECK PSD FILE !!
-    Link->pos.x = 200;
-    Link->pos.y = 200;
-    Link->pos.w = 400;
-    Link->pos.h = 50;
-}
-
-//////////////////////////////////////////////////////////////////////////
-
 void InitUI(UI* Interface) {
     // Init Text
     InitInput(&(Interface->Input));
 
-    // Init background image
-    Interface->Background = IMG_LoadTexture(Render, "Assets/Wallpaper.jpg");
-
-    // Init link TA
-    InitTA(&(Interface->Link));
+    // Init background images
+    Interface->Background.BG_Unselect = IMG_LoadTexture(Render, "Assets/Background.png");
+    Interface->Background.BG_Select = IMG_LoadTexture(Render, "Assets/Background link selected.png");
+    Interface->Background.Button_pos.x = 97;
+    Interface->Background.Button_pos.y = 291;
+    Interface->Background.Button_pos.w = 250;
+    Interface->Background.Button_pos.h = 62;
 }
 
 //////////////////////////////////////////////////////////////////////////
@@ -200,12 +188,22 @@ void UpdateTxtRendering(Text* Input) {
 
 //////////////////////////////////////////////////////////////////////////
 
+void CheckLinkButton(UI Interface){
+    if(Event.motion.x > 97 && Event.motion.x < 173 + WidthBUTTON){
+        if(Event.motion.y > 291  && Event.motion.y < 291 + HeightBUTTON){
+            SDL_RenderCopy(Render, Interface.Background.BG_Select, &(Interface.Background.Button_pos), &(Interface.Background.Button_pos));
+        }
+    }
+}
+
+//////////////////////////////////////////////////////////////////////////
+
 void RenderUI(UI Interface) {
     // Prepare UI background rendering
-    SDL_RenderCopy(Render, Interface.Background, NULL, NULL);
+    SDL_RenderCopy(Render, Interface.Background.BG_Unselect, NULL, NULL);
 
-    // Prepare Link background rendering
-    SDL_RenderCopy(Render, Interface.Link.img, &Interface.Link.pos, &Interface.Link.pos);
+    // Check button rendering + click
+    CheckLinkButton(Interface);
 
     // Prepare text rendering
     SDL_RenderCopy(Render, Interface.Input.Texture_txt, NULL, &(Interface.Input.Txt_pos));

@@ -1,9 +1,13 @@
 #include <stdio.h>
 #include "Functions.h"
 
-// (1) Automatic program compilation and execution : make
-// (2) Manual command : gcc -o bin/main.exe main.c Functions.c -I ./Src/include -L ./Src/lib -lmingw32 -lSDL2main -lSDL2 -lSDL2_image -lSDL2_ttf
-// (2) Manual execution : ./bin/main
+/*
+* (1) Automatic program compilation and execution :
+*      - "make" on Linux/Unix
+*      - "mingw32-make.exe" on Windows 
+* (2) Manual command : gcc -o bin/main.exe main.c Functions.c -I ./Src/include -L ./Src/lib -lmingw32 -lSDL2main -lSDL2 -lSDL2_image -lSDL2_ttf
+* (2) Manual execution : ./bin/main
+*/
 
 int main( int argc, char* argv[] )
 {
