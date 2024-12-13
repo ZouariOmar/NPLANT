@@ -45,6 +45,7 @@ typedef struct Background{
 typedef struct UserInterface{
     BG Background;
     Text Input;
+    Text Output;
     Text Error;
     int Check_Error,
         Btn_press;
@@ -52,10 +53,10 @@ typedef struct UserInterface{
 
 /*
     > Structure containing the UI specificities :
-        - Background image
-        - Link image ( When mouse is over it )
-        - Position of the image of the link
-        - Text input
+        - Background images
+        - User input
+        - Check if the error message has to be shown
+        - Check if the link button has been pressed
 */
 
 ///////////////////////////////////////////////////////////////
@@ -79,6 +80,9 @@ void InitTxtPos(SDL_Rect* pos, int x, int y, int w, int h);
 // Initialization of the input
 void InitInput(Text* Input);
 
+// Initialization of the output
+void InitOutput(Text* Output);
+
 // Initialization of the error
 void InitError(Text* Error);
 
@@ -98,13 +102,13 @@ void UpdateTxtRendering(UI* Interface);
 
 /* ================= BUTTON UPDATE ================= */
 
-// Update the image of the button
-void CheckLinkButton(UI Interface);
+// Update the image of the button and check if it has been pressed
+void CheckLinkButton(UI* Interface);
 
 /* ================= RENDERING ================= */
 
 // Render the User inteface to the screen
-void RenderUI(UI Interface);
+void RenderUI(UI* Interface);
 
 //////////////////////////////////////////////////////////////////////////
 

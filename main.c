@@ -31,7 +31,7 @@ int main( int argc, char* argv[] )
                 UpdateTxtRendering(&Interface);
             
             // Render UI
-            RenderUI(Interface);
+            RenderUI(&Interface);
         }
 
         // Delay of 100ms
