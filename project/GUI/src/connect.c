@@ -31,6 +31,8 @@ size_t write_callback(void *ptr, size_t size, size_t nmemb, char *data) {
 
 /**
  * @brief ### The main C-Firebase HTTP Get Request function
+ * @param uid {char *}
+ * @param data {char *}
  */
 void connectToFirebase(char *uid, char *data) {
   CURL *curl = curl_easy_init();
@@ -43,7 +45,7 @@ void connectToFirebase(char *uid, char *data) {
   if (curl) {
     curl_easy_setopt(curl, CURLOPT_URL, url);  // Set Firebase database URL
 
-    // Specify the write callback function to handle the data (@YoussefSaaidi2004 ya 7alawa)
+    // Specify the write callback function to handle the data
     curl_easy_setopt(curl, CURLOPT_WRITEFUNCTION, write_callback);
     curl_easy_setopt(curl, CURLOPT_WRITEDATA, data);
 

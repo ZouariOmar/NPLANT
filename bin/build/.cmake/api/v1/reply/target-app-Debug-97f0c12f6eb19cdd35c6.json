@@ -27,25 +27,25 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 38,
+				"line" : 40,
 				"parent" : 0
 			},
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 57,
+				"line" : 58,
 				"parent" : 0
 			},
 			{
 				"command" : 2,
 				"file" : 0,
-				"line" : 41,
+				"line" : 43,
 				"parent" : 0
 			},
 			{
 				"command" : 3,
 				"file" : 0,
-				"line" : 47,
+				"line" : 49,
 				"parent" : 0
 			}
 		]
@@ -112,6 +112,11 @@
 			{
 				"backtrace" : 2,
 				"fragment" : "/usr/lib/x86_64-linux-gnu/libSDL2_ttf.so",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "/usr/lib/x86_64-linux-gnu/libSDL2_image.so",
 				"role" : "libraries"
 			},
 			{

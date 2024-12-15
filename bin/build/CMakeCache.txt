@@ -413,7 +413,7 @@ CURL_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CURL_LIBRARY_RELEASE
 CURL_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
 //Details about finding CURL
-FIND_PACKAGE_MESSAGE_DETAILS_CURL:INTERNAL=[/usr/lib/x86_64-linux-gnu/libcurl.so][/usr/include/x86_64-linux-gnu][c ][v8.10.1()]
+FIND_PACKAGE_MESSAGE_DETAILS_CURL:INTERNAL=[/usr/lib/x86_64-linux-gnu/libcurl.so][/usr/include/x86_64-linux-gnu][c ][v8.11.0()]
 PC_CURL_CFLAGS:INTERNAL=-I/usr/include/x86_64-linux-gnu;-I/usr/include;-I/usr/include/p11-kit-1
 PC_CURL_CFLAGS_I:INTERNAL=
 PC_CURL_CFLAGS_OTHER:INTERNAL=

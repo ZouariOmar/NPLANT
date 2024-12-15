@@ -33,6 +33,8 @@ set(HEADERS
 # Manually set SDL2_ttf paths
 set(SDL2_TTF_INCLUDE_DIRS "/usr/include/SDL2")  # Path to SDL2_ttf headers
 set(SDL2_TTF_LIBRARIES "/usr/lib/x86_64-linux-gnu/libSDL2_ttf.so")  # Path to SDL2_ttf library file
+set(SDL2_IMAGE_INCLUDE_DIRS "/usr/include/SDL2")  # Path to SDL2_ttf headers
+set(SDL2_IMAGE_LIBRARIES "/usr/lib/x86_64-linux-gnu/libSDL2_image.so")  # Path to SDL2_ttf library file
 
 # Add the executable target
 add_executable(${PROJECT_NAME} ${SOURCES} ${HEADERS})
@@ -48,7 +50,6 @@ include_directories(
   ${SDL2_INCLUDE_DIRS}
   ${SDL2_TTF_INCLUDE_DIRS}
   ${SDL2_IMAGE_INCLUDE_DIRS}
-  ${SDL2_MIXER_INCLUDE_DIRS}
   ${CURL_INCLUDE_DIRS}
   ${CJSON_INCLUDE_DIRS}
 )
@@ -58,7 +59,6 @@ target_link_libraries(${PROJECT_NAME}
   ${SDL2_LIBRARIES}
   ${SDL2_TTF_LIBRARIES}
   ${SDL2_IMAGE_LIBRARIES}
-  ${SDL2_MIXER_LIBRARIES}
   ${CURL_LIBRARIES}
   ${CJSON_LIBRARIES}
   m  # Math library on Linux

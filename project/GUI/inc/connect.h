@@ -23,18 +23,6 @@
 #include <stdlib.h>
 #include <string.h>
 
-//* Custom C headers
-
-//? --------------------- PUBLIC VARS DECLARATION PART ---------------------
-/*
-None...
-*/
-
-//? Structures prototype declaration part
-/*
-None...
-*/
-
 //? Functions prototype declaration part
 size_t write_callback(void *, size_t, size_t, char *);
 void connectToFirebase(char *, char *);

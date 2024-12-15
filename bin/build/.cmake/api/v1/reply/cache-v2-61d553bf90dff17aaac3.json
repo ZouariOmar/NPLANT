@@ -1215,7 +1215,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "[/usr/lib/x86_64-linux-gnu/libcurl.so][/usr/include/x86_64-linux-gnu][c ][v8.10.1()]"
+			"value" : "[/usr/lib/x86_64-linux-gnu/libcurl.so][/usr/include/x86_64-linux-gnu][c ][v8.11.0()]"
 		},
 		{
 			"name" : "PC_CURL_CFLAGS",

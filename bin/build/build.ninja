@@ -81,9 +81,9 @@ build CMakeFiles/app.dir/home/zouari_omar/Documents/Daily/Projects/IoT_project/p
 #############################################
 # Link the executable app
 
-build app: C_EXECUTABLE_LINKER__app_Debug CMakeFiles/app.dir/home/zouari_omar/Documents/Daily/Projects/IoT_project/project/GUI/src/main.c.o CMakeFiles/app.dir/home/zouari_omar/Documents/Daily/Projects/IoT_project/project/GUI/src/lib.c.o CMakeFiles/app.dir/home/zouari_omar/Documents/Daily/Projects/IoT_project/project/GUI/src/connect.c.o | /usr/lib/x86_64-linux-gnu/libSDL2.so /usr/lib/x86_64-linux-gnu/libSDL2_ttf.so /usr/lib/x86_64-linux-gnu/libcurl.so /usr/lib/x86_64-linux-gnu/libcjson_utils.so.1.7.18 /usr/lib/x86_64-linux-gnu/libcjson.so.1.7.18
+build app: C_EXECUTABLE_LINKER__app_Debug CMakeFiles/app.dir/home/zouari_omar/Documents/Daily/Projects/IoT_project/project/GUI/src/main.c.o CMakeFiles/app.dir/home/zouari_omar/Documents/Daily/Projects/IoT_project/project/GUI/src/lib.c.o CMakeFiles/app.dir/home/zouari_omar/Documents/Daily/Projects/IoT_project/project/GUI/src/connect.c.o | /usr/lib/x86_64-linux-gnu/libSDL2.so /usr/lib/x86_64-linux-gnu/libSDL2_ttf.so /usr/lib/x86_64-linux-gnu/libSDL2_image.so /usr/lib/x86_64-linux-gnu/libcurl.so /usr/lib/x86_64-linux-gnu/libcjson_utils.so.1.7.18 /usr/lib/x86_64-linux-gnu/libcjson.so.1.7.18
   FLAGS = -Wall -Wextra -g -g
-  LINK_LIBRARIES = /usr/lib/x86_64-linux-gnu/libSDL2.so  /usr/lib/x86_64-linux-gnu/libSDL2_ttf.so  /usr/lib/x86_64-linux-gnu/libcurl.so  /usr/lib/x86_64-linux-gnu/libcjson_utils.so.1.7.18  /usr/lib/x86_64-linux-gnu/libcjson.so.1.7.18  -lm
+  LINK_LIBRARIES = /usr/lib/x86_64-linux-gnu/libSDL2.so  /usr/lib/x86_64-linux-gnu/libSDL2_ttf.so  /usr/lib/x86_64-linux-gnu/libSDL2_image.so  /usr/lib/x86_64-linux-gnu/libcurl.so  /usr/lib/x86_64-linux-gnu/libcjson_utils.so.1.7.18  /usr/lib/x86_64-linux-gnu/libcjson.so.1.7.18  -lm
   OBJECT_DIR = CMakeFiles/app.dir
   POST_BUILD = :
   PRE_LINK = :
