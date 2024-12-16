@@ -11,9 +11,9 @@
 //? -------------------- DEFINE PROTOTYPE DECLARATION PART --------------------
 #ifndef __CONNECT_H__
 #define __CONNECT_H__
-#define URL "https://iot-project-e76ac-default-rtdb.firebaseio.com/%s/humidity.json"  // Firebase URL
-#define JSON_DATA_POST_REQUEST "{\"email\":\"%s\",\"password\":\"%s\",\"returnSecureToken\":true}"
-#define GOOGLE_API "https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyDboLSUY1wHSCkGN6BqvZwu2k1CGMVB7Kc"  // Firebase URL + ProjectApiKey
+#define URL ".env"  // Firebase URL
+#define JSON_DATA_POST_REQUEST ".env"
+#define GOOGLE_API ".env"  // Firebase URL + ProjectApiKey
 
 //? -------------------- INCLUDE PROTOTYPE DECLARATION PART --------------------
 //* Stander C headers

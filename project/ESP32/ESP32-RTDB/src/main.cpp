@@ -26,10 +26,10 @@
 #include "addons/TokenHelper.h"
 
 //* Insert our network credentials
-#define WIFI_SSID "SkibidiRot"                                                  // My Wi-Fi SSID @ZouariOmar
-#define WIFI_PASSWORD "fraddosse2004910"                                   // My Wi-Fi password @ZouariOmar
-#define API_KEY "AIzaSyDboLSUY1wHSCkGN6BqvZwu2k1CGMVB7Kc"                      // Insert Firebase project API Key
-#define DATABASE_URL "https://iot-project-e76ac-default-rtdb.firebaseio.com/"  // Insert the RTDB URL
+#define WIFI_SSID ".env"      // My Wi-Fi SSID @ZouariOmar
+#define WIFI_PASSWORD ".env"  // My Wi-Fi password @ZouariOmar
+#define API_KEY ".env"        // Insert Firebase project API Key
+#define DATABASE_URL ".env"   // Insert the RTDB URL
 
 //* ESP32 pre-processor part
 #define SOIL_MOISTURE_PIN 34
@@ -47,8 +47,8 @@ bool signupOK{};
 void initWiFi();
 
 void setup() {
-  Serial.begin(115200);               // Init the ESP32 SM Frequency
-  initWiFi();                         // Init the ESP32-Wifi connection
+  Serial.begin(115200);  // Init the ESP32 SM Frequency
+  initWiFi();            // Init the ESP32-Wifi connection
   // Assign the api key (required)
   config.api_key = API_KEY;
 
@@ -72,7 +72,7 @@ void loop() {
   if (Firebase.ready() && signupOK && (millis() - sendDataPrevMillis > 1500 || sendDataPrevMillis == 0)) {
     sendDataPrevMillis = millis();
     // Write the humidity data in `uid/humidity` dir
-    if (Firebase.RTDB.setInt(&fb_dt, "5ziuAV9kbnSwE42E1oE3sWID1tm1/humidity", analogRead(SOIL_MOISTURE_PIN))) {
+    if (Firebase.RTDB.setInt(&fb_dt, ".env/UID_H", analogRead(SOIL_MOISTURE_PIN))) {
       Serial.println("PASSED!");
       Serial.println("PATH: "), Serial.print(fb_dt.dataPath());
       Serial.println("TYPE: "), Serial.print(fb_dt.dataType());

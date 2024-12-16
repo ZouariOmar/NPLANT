@@ -1,5 +1,6 @@
-# env
+# Environment Variables
 *.env
 
-# API's
-*firebase.json
+# Firebase Configuration
+firebase.json
+RTDB.json
