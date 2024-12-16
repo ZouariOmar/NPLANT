@@ -26,8 +26,8 @@
 #include "addons/TokenHelper.h"
 
 //* Insert our network credentials
-#define WIFI_SSID "ORANGE999"                                                  // My Wi-Fi SSID @ZouariOmar
-#define WIFI_PASSWORD "testtrue2002testtrue"                                   // My Wi-Fi password @ZouariOmar
+#define WIFI_SSID "SkibidiRot"                                                  // My Wi-Fi SSID @ZouariOmar
+#define WIFI_PASSWORD "fraddosse2004910"                                   // My Wi-Fi password @ZouariOmar
 #define API_KEY "AIzaSyDboLSUY1wHSCkGN6BqvZwu2k1CGMVB7Kc"                      // Insert Firebase project API Key
 #define DATABASE_URL "https://iot-project-e76ac-default-rtdb.firebaseio.com/"  // Insert the RTDB URL
 
@@ -69,7 +69,7 @@ void setup() {
 }
 
 void loop() {
-  if (Firebase.ready() && signupOK && (millis() - sendDataPrevMillis > 15000 || sendDataPrevMillis == 0)) {
+  if (Firebase.ready() && signupOK && (millis() - sendDataPrevMillis > 1500 || sendDataPrevMillis == 0)) {
     sendDataPrevMillis = millis();
     // Write the humidity data in `uid/humidity` dir
     if (Firebase.RTDB.setInt(&fb_dt, "5ziuAV9kbnSwE42E1oE3sWID1tm1/humidity", analogRead(SOIL_MOISTURE_PIN))) {

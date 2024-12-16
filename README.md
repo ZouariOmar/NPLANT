@@ -1,4 +1,33 @@
-<!-- @format -->
+<!-- PROJECT SHIELDS -->
+
+[![Contributors](https://img.shields.io/badge/CONTRIBUTORS-06-blue?style=plastic)](https://github.com/ZouariOmar/AgriGO/graphs/contributors) [![Forks](https://img.shields.io/badge/FORKS-00-blue?style=plastic)](https://github.com/ZouariOmar/AgriGO/network/members)
+[![Stargazers](https://img.shields.io/badge/STARS-02-blue?style=plastic)](https://github.com/ZouariOmar/AgriGO/stargazers)
+[![Issues](https://img.shields.io/badge/ISSUES-00-blue?style=plastic)](https://github.com/ZouariOmar/AgriGO/issues)
+[![MIT License](https://img.shields.io/badge/LICENSE-MIT_Non_Commercial_License_with_Exclusive_Commercial_Rights-blue?style=plastic)](LICENSE)
+[![LinkedIn](https://img.shields.io/badge/-LinkedIn-black.svg?style=plastic&logo=linkedin&colorB=blue)](https://www.linkedin.com/in/zouari-omar-143239283)
+
+<!-- PROJECT LOGO -->
+<br />
+<div align="center">
+  <a href="https://github.com/ZouariOmar/NPLANT">
+    <img src="doc/imgs/logo.png" alt="Logo" width="400" height="400">
+  </a>
+
+<h3 align="center">AgriGO</h3>
+
+  <p align="center">
+    Desktop app to present the AgriGO project
+    <br />
+    <a href="https://github.com/ZouariOmar/AgriGO"><strong>Explore the docs »</strong></a>
+    <br />
+    <br />
+    <a href="https://github.com/ZouariOmar/AgriGO">View Demo</a>
+    ·
+    <a href="https://github.com/ZouariOmar/AgriGO/issues/new?labels=bug&template=bug-report---.md">Report Bug</a>
+    ·
+    <a href="https://github.com/ZouariOmar/AgriGO/issues/new?labels=enhancement&template=feature-request---.md">Request Feature</a>
+  </p>
+</div>
 
 # IoT Plant Humidity Detector
 
