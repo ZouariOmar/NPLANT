@@ -2,5 +2,5 @@
 *.env
 
 # Firebase Configuration
-firebase.json
-RTDB.json
+project/firebase/firebase.json
+project/firebase/RTDB.json
