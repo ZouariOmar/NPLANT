@@ -95,7 +95,6 @@ extern const SDL_Color WHITE;
 extern const SDL_Color BLACK;
 
 //? -------------------- FUNCTIONS PROTOTYPE DECLARATION PART --------------------
-void __lance__();
 
 /* ================= INIT AND FREE SDL ================= */
 

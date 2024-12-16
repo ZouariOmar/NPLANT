@@ -25,7 +25,6 @@
 
 //? Functions prototype declaration part
 size_t write_callback(void *, size_t, size_t, char *);
-void connectToFirebase(char *, char *);
-void firebase_sign_in(const char *, const char *);
+int connectToFirebase(const char *, char *, size_t);
 
 #endif  // __CONNECT_H__

@@ -18,16 +18,6 @@ SDL_Event Event;
 //? ----------------------- FUNCTIONS PROTOTYPE DEV PART -----------------------
 
 /**
- * @brief ### The sub main app entry function
- */
-// void __lance__() {
-//   // Fetch data from Firebase
-//   char data[28] = "";  // Hold the humidity value
-//   connectToFirebase("H1AX5Pmp8mfBOHfyAWOIjpkSBuh1", data);
-//   printf("Humidity: %s", data);
-// }
-
-/**
  * @brief ### Initialize SDL2.0
  */
 void InitSDL() {
@@ -53,9 +43,9 @@ void InitSDL() {
 
 /**
  * @brief ### Global SDL free, destroy and quit function
- * @param Interface {UI *} 
+ * @param Interface {UI *}
  */
-void SDLFree(UI *Interface) {
+void SDLFree(UI* Interface) {
   SDL_FreeSurface(Interface->Error.Surface_txt);
   SDL_DestroyTexture(Interface->Error.Texture_txt);
   SDL_FreeSurface(Interface->Input.Surface_txt);
@@ -77,7 +67,7 @@ void SDLFree(UI *Interface) {
  * @param b {Uint8}
  * @param a {Uint8}
  */
-void InitTxtColor(SDL_Color *Color, Uint8 r, Uint8 g, Uint8 b, Uint8 a) {
+void InitTxtColor(SDL_Color* Color, Uint8 r, Uint8 g, Uint8 b, Uint8 a) {
   Color->r = r;
   Color->g = g;
   Color->b = b;
@@ -92,7 +82,7 @@ void InitTxtColor(SDL_Color *Color, Uint8 r, Uint8 g, Uint8 b, Uint8 a) {
  * @param w {int}
  * @param h {int}
  */
-void InitTxtPos(SDL_Rect *pos, int x, int y, int w, int h) {
+void InitTxtPos(SDL_Rect* pos, int x, int y, int w, int h) {
   pos->x = x;
   pos->y = y;
   pos->w = w;
@@ -103,7 +93,7 @@ void InitTxtPos(SDL_Rect *pos, int x, int y, int w, int h) {
  * @brief ### Initialize the in-text font
  * @param Input {Text *}
  */
-void InitInput(Text *Input) {
+void InitInput(Text* Input) {
   Input->Font = TTF_OpenFont("../../project/GUI/font/ARIAL.TTF", 30);
   if (!(Input->Font)) {
     printf("> Erreur lors du chargement de la police 'input' : %s\n", TTF_GetError());
@@ -128,7 +118,7 @@ void InitInput(Text *Input) {
  * @brief ### Initialize the out-text font
  * @param Output {Text *}
  */
-void InitOutput(Text *Output) {
+void InitOutput(Text* Output) {
   Output->Font = TTF_OpenFont("../../project/GUI/font/ARIAL.TTF", 25);
   if (!(Output->Font)) {
     printf("> Erreur lors du chargement de la police 'output' : %s\n", TTF_GetError());
@@ -195,7 +185,7 @@ void InitBackgroundimages(BG* Background) {
  * @brief ### Initialize the link button screen position and format dimensions
  * @param Background {BG *}
  */
-void InitButtonPos(BG *Background) {
+void InitButtonPos(BG* Background) {
   Background->Btn_pos.x = 97;
   Background->Btn_pos.y = 291;
   Background->Btn_pos.w = 250;
@@ -349,8 +339,10 @@ void RenderUI(UI* Interface) {
   SDL_RenderCopy(Render, Interface->Input.Texture_txt, NULL, &(Interface->Input.Txt_pos));
 
   // Output rendering
-  if (Interface->connect)
+  if (Interface->connect) {
+    UpdateTxtTexture(&(Interface->Output));
     SDL_RenderCopy(Render, Interface->Output.Texture_txt, NULL, &(Interface->Output.Txt_pos));
+  }
 
   // Error rendering
   if (Interface->Check_Error)

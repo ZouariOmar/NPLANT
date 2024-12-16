@@ -13,13 +13,8 @@
 
 //? --------------------------------- MAIN() INT FUNCTION DEV PART ---------------------------------
 
-// int main() {
-//   __lance__();
-//   return 0;
-// }
-
 /**
- * @brief # The Main program function
+ * @brief # The Main program function
  * @return int
  */
 int main() {
@@ -40,17 +35,18 @@ int main() {
       else if (Event.type == SDL_KEYDOWN)
         UpdateTxtRendering(&Interface);
 
-      //! testing case
-      if (Interface.Btn_press) {
-        connectToFirebase(Interface.Input.Txt, Interface.Output.Txt);
-        printf("%s\n", Interface.Output.Txt);
-        Interface.Btn_press = 0;
-      }
-
       // Render UI
       RenderUI(&Interface);
-    }
 
+      //* Passed
+      if (Interface.Btn_press) {
+        char data[28] = "";  // Hold the humidity value
+        if (connectToFirebase(Interface.Input.Txt, data, sizeof(data)))
+          snprintf(data, sizeof(data), "Permission Denied!");
+        snprintf(Interface.Output.Txt, sizeof(Interface.Output.Txt), "%s", data);
+        Interface.connect = 1, Interface.Btn_press = 0;
+      }
+    }
     // Delay of 100ms
     SDL_Delay(100);
   }
