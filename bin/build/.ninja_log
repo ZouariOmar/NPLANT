@@ -1,7 +1,0 @@
-# ninja log v6
-847	1740	1734342217928021440	app	63c73ebcbb5ee431
-3	846	1734342217083982522	CMakeFiles/app.dir/home/zouari_omar/Documents/Daily/Projects/IoT_project/project/GUI/src/main.c.o	8bae5cb4ebaf2f24
-3	814	1734342217083982522	CMakeFiles/app.dir/home/zouari_omar/Documents/Daily/Projects/IoT_project/project/GUI/src/lib.c.o	a22749e3f04f3b5f
-4	108	1734342217083982522	CMakeFiles/app.dir/home/zouari_omar/Documents/Daily/Projects/IoT_project/project/GUI/src/connect.c.o	ede73a81c2e51c9a
-2	7	1734342217071981968	clean	a31eedcededa8236
-2	151	1734343129837239085	build.ninja	83cd1415fc01202a
